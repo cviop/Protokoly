@@ -19,7 +19,7 @@
 \usepackage{enumerate}                  %podpora pro zmenu cislovani
 \usepackage{fancyhdr}                   %vlastni zahlavi a~zapati
 \usepackage{graphicx}                   %podpora grafiky
-%\graphicspath{{img/}}                   %vychozi adresar s~obrazky
+\graphicspath{{materialy/}}                   %vychozi adresar s~obrazky
 \usepackage{caption}                    %popisky
 \usepackage{subcaption}                 %podpopisky
 \usepackage{siunitx}
@@ -92,6 +92,7 @@
 %\newcommand{}{}
 \newcommand{\tsub}[1]{$_\textrm{#1}$}
 \newcommand{\texp}[1]{$^\textrm{#1}$}
+\newcommand{\tmu}{$\mu$}
 
 %_______________________________________________________________________________________%
 %_______________________________________________________________________________________%
@@ -191,11 +192,70 @@
 \end{itemize}
 
 \section{Teoretický úvod}
-
+Při měření malých proudů ručními ampérmetry nastává chyba měření. Ta je dána relativně vysokým odporem bočníku ampérmetru, na kterém měříme úbytek napětí. Dle obrázku \ref{fig:schema} je vidět, že odpor diody, která není vlivem nízkého napětí zcela otevřena, je srovnatelný s odporem ampérmetru. Vinou čehož vznikne dělič napětí se srovnatelnými úbytky napětí na diodě a na ampérmetru. Tato chyba metody jde kompenzovat zvýšením rozsahu a tedy snížením odporu. Zde se ale naměřená hodnota dostane na začátek rozsahu a vzniká zde opět nejistota měření daná \textit{chybou rozsahu}. 
 
 
 \section{Naměřené hodnoty}
+Změřená data jsou v tabulce \ref{tab:zmereno}.
 
+\begin{table}[h!]
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \rule{0pt}{2.5ex}
+        \multirow{2}{*}{Vstupní napětí $\frac{U}{\textrm{V}}$}& Ručičkový \tmu ampérmetr$\frac{I}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{I}{\mu\textrm{A}}$	&GDM-8145 $\frac{I}{\textrm{mA}}$	&IU Převodník $\frac{U}{\textrm{V}}$  \\[.7ex]
+        & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA & rozsah  2 V\\\hline\hline
+        0,2&0,9&1,33&0,0012&-0,0155\\\hline
+        0,3&1,4&2,36&0,0024&-0,0277\\\hline
+        0,4&2&3,69&0,0041&-0,0448\\\hline
+        0,5&2,6&5,39&0,0064&-0,0684\\\hline
+        0,6&3,3&7,48&0,0095&-0,1012\\\hline
+        0,7&4&10&0,0136&-0,1459\\\hline
+        0,8&4,8&12,96&0,0190&-0,2062\\\hline
+        0,9&5,25&16,37&0,0260&-0,2867\\\hline
+        1&6,4&20,23&0,0349&-0,3926\\\hline
+    
+    \end{tabular}
+    \caption{Změřené hodnoty}
+    \label{tab:zmereno}
+\end{table}
+
+Námi změřené hodnoty mají různé předpony i jednotky. Je proto nutné je přepočítat na jednotné jednotky. Pro číslicový ampérmetr stačí hodnoty v mA vynásobit 1000, abychom dostali \tmu A. Pro spočtení napětí na výstupu operačního zesilovače platí:
+\begin{equation*}
+    \begin{split}
+        I_{in}&=-I_{out}\\
+        I_{in}&=-\frac{U_{out}}{R}\\
+        I_{in}&=-\frac{U_{out}}{10\,000} \textrm{A}\\
+    \end{split}
+\end{equation*}
+Jelikož hodnoty napětí byly měřeny ve voltech a jednotné jednotky jsou \tmu A, je potřeba změřené napětí vydělit $-0,1\,\frac{\textrm{A}}{\textrm{V}}$. Přepočtené hodnoty jsou zapsána v tabulce \ref{tab:prepocteno} a zobrazena v grafu \ref{graf:hodnoty}.
+
+
+\begin{table}[h!]
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        \rule{0pt}{2.5ex}
+        \multirow{2}{*}{Vstupní napětí $\frac{U}{\textrm{V}}$}& Ručičkový \tmu ampérmetr$\frac{U}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&IU Převodník $\frac{I}{\mu\textrm{A}}$  \\[.7ex]
+        & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA & rozsah  2 V\\\hline\hline
+        0,02&0,9&1,33&1,2&1,55\\\hline
+        0,03&1,4&2,36&2,4&2,77\\\hline
+        0,04&2&3,69&4,1&4,48\\\hline
+        0,05&2,6&5,39&6,4&6,84\\\hline
+        0,06&3,3&7,48&9,5&10,12\\\hline
+        0,07&4&10&13,6&14,59\\\hline
+        0,08&4,8&12,96&19&20,62\\\hline
+        0,09&5,25&16,37&26&28,67\\\hline
+        0,1&6,4&20,23&34,9&39,26\\\hline
+    \end{tabular}
+    \caption{Přepočtené hodnoty}
+    \label{tab:prepocteno}
+\end{table}
+
+\begin{graf}[h!]
+    \centering
+    \includegraphics[width=.8\textwidth]{graf_namereno.pdf}
+    \caption{Naměřené hodnoty přepočtené na \tmu A}
+    \label{graf:hodnoty}
+\end{graf}
 
 
 \section{Zpracování naměřených hodnot}
