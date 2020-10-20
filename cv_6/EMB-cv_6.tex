@@ -93,6 +93,7 @@
 \newcommand{\tsub}[1]{$_\textrm{#1}$}
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tmu}{$\mu$}
+\newcommand{\tpm}{$\pm$}
 
 %_______________________________________________________________________________________%
 %_______________________________________________________________________________________%
@@ -156,6 +157,7 @@
 
 
 \section{Úkol měření}
+
 \label{zadani}
 \begin{enumerate}
     \item V zapojení podle obr. \ref{fig:schema} změřte proud germaniovou diodou v propustném směru v oblasti malých napětí (20 až 100 mV) v pěti bodech charakteristiky:\label{jedna}
@@ -169,7 +171,10 @@
     \item Z naměřených hodnot určete \textbf{vnitřní odpory použitých mikroampérmetrů}.
 \end{enumerate}
 
+
+
 \section{Schéma zapojení}
+
 \label{schema_zapojeni}
 \begin{figure}[h!]
     \centering
@@ -179,11 +184,13 @@
 \end{figure}
 
 
+
 \section{Seznam použitých přístrojů}
+
 \begin{itemize}
     \item V\tsub{2} - voltmetr číslicový, typ ..., přesnost ...
-    \item $\mu$A\tsub{1} - mikroampérmetr magnetoelektrický, tř.přes. ..., rozsah ...
-    \item $\mu$A\tsub{2} - mikroampérmetr číslicový, typ ..., přesnost ...
+    \item $\mu$A\tsub{1} - mikroampérmetr magnetoelektrický, tř.přes. 0,5, rozsah 150 \tmu A
+    \item $\mu$A\tsub{2} - mikroampérmetr číslicový, typ GDM-8145 přesnost \tpm (0,3 \% + 2 digity), rozsah 200\,\tmu A a 2\,mA
     \item R - přesný rezistor nebo odporová dekáda, přesnost 0,1\,\% (příp. 0,2\,\%)
     \item Př1 - přípravek s odporovým děličem a polovodičovou diodou
     \item Př2 - přípravek s operačním zesilovačem
@@ -191,13 +198,17 @@
     \item NZ - napájecí zdroj pro OZ
 \end{itemize}
 
+
+
 \section{Teoretický úvod}
+
 Při měření malých proudů ručními ampérmetry nastává chyba měření. Ta je dána relativně vysokým odporem bočníku ampérmetru, na kterém měříme úbytek napětí. Dle obrázku \ref{fig:schema} je vidět, že odpor diody, která není vlivem nízkého napětí zcela otevřena, je srovnatelný s odporem ampérmetru. Vinou čehož vznikne dělič napětí se srovnatelnými úbytky napětí na diodě a na ampérmetru. Tato chyba metody jde kompenzovat zvýšením rozsahu a tedy snížením odporu. Zde se ale naměřená hodnota dostane na začátek rozsahu a vzniká zde opět nejistota měření daná \textit{chybou rozsahu}. 
 
 
-\section{Naměřené hodnoty}
-Změřená data jsou v tabulce \ref{tab:zmereno}.
 
+\section{Naměřené hodnoty}
+
+Změřená data jsou v tabulce \ref{tab:zmereno}.
 \begin{table}[h!]
     \begin{tabular}{|c|c|c|c|c|}
         \hline
@@ -220,31 +231,38 @@ Změřená data jsou v tabulce \ref{tab:zmereno}.
 \end{table}
 
 Námi změřené hodnoty mají různé předpony i jednotky. Je proto nutné je přepočítat na jednotné jednotky. Pro číslicový ampérmetr stačí hodnoty v mA vynásobit 1000, abychom dostali \tmu A. Pro spočtení napětí na výstupu operačního zesilovače platí:
-\begin{equation*}
+\begin{equation}
     \begin{split}
         I_{in}&=-I_{out}\\
         I_{in}&=-\frac{U_{out}}{R}\\
-        I_{in}&=-\frac{U_{out}}{10\,000} \textrm{A}\\
+        I_{in}&=-\frac{U_{out}}{10\,000} \textrm{A},\\
     \end{split}
-\end{equation*}
-Jelikož hodnoty napětí byly měřeny ve voltech a jednotné jednotky jsou \tmu A, je potřeba změřené napětí vydělit $-0,1\,\frac{\textrm{A}}{\textrm{V}}$. Přepočtené hodnoty jsou zapsána v tabulce \ref{tab:prepocteno} a zobrazena v grafu \ref{graf:hodnoty}.
+    \label{eq:iu}
+\end{equation}
+kde $I_{out}$ je proud protékající diodou, $U_{out}$ je měřené napětí a $R$ je rezistor připojen mezi výstup a invertující vstup operačního zesilovače.
 
+
+
+\section{Zpracování naměřených hodnot}
+
+\subsection{Převod na stejné jednotky}
+Jelikož hodnoty napětí byly měřeny ve voltech a jednotné jednotky jsou \tmu A, je potřeba změřené napětí vydělit $-0,1\,\frac{\textrm{A}}{\textrm{V}}$. Přepočtené hodnoty jsou zapsána v tabulce \ref{tab:prepocteno} a zobrazena v grafu \ref{graf:hodnoty}.
 
 \begin{table}[h!]
     \begin{tabular}{|c|c|c|c|c|}
         \hline
         \rule{0pt}{2.5ex}
-        \multirow{2}{*}{Vstupní napětí $\frac{U}{\textrm{V}}$}& Ručičkový \tmu ampérmetr$\frac{U}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&IU Převodník $\frac{I}{\mu\textrm{A}}$  \\[.7ex]
+        \multirow{2}{*}{Napětí na děliči $\frac{U}{\textrm{V}}$}& Ručičkový \tmu ampérmetr$\frac{U}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&IU Převodník $\frac{I}{\mu\textrm{A}}$  \\[.7ex]
         & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA & rozsah  2 V\\\hline\hline
-        0,02&0,9&1,33&1,2&1,55\\\hline
-        0,03&1,4&2,36&2,4&2,77\\\hline
-        0,04&2&3,69&4,1&4,48\\\hline
-        0,05&2,6&5,39&6,4&6,84\\\hline
-        0,06&3,3&7,48&9,5&10,12\\\hline
-        0,07&4&10&13,6&14,59\\\hline
-        0,08&4,8&12,96&19&20,62\\\hline
-        0,09&5,25&16,37&26&28,67\\\hline
-        0,1&6,4&20,23&34,9&39,26\\\hline
+        0,02    &0,9    &1,33   &1,2    &1,55\\\hline
+        0,03    &1,4    &2,36   &2,4    &2,77\\\hline
+        0,04    &2      &3,69   &4,1    &4,48\\\hline
+        0,05    &2,6    &5,39   &6,4    &6,84\\\hline
+        0,06    &3,3    &7,48   &9,5    &10,12\\\hline
+        0,07    &4      &10     &13,6   &14,59\\\hline
+        0,08    &4,8    &12,96  &19     &20,62\\\hline
+        0,09    &5,25   &16,37  &26     &28,67\\\hline
+        0,1     &6,4    &20,23  &34,9   &39,26\\\hline
     \end{tabular}
     \caption{Přepočtené hodnoty}
     \label{tab:prepocteno}
@@ -257,9 +275,87 @@ Jelikož hodnoty napětí byly měřeny ve voltech a jednotné jednotky jsou \tm
     \label{graf:hodnoty}
 \end{graf}
 
+\subsection{Nejistota IU převodníku}
+Pro určení nejistoty měření proudu z měření napětí musíme parciálně zderivovat rovnici \ref{eq:iu} podle všech proměnných. Celý postup je v rovnici \ref{eq:oz_nejistota}.
+\begin{equation}
+    \begin{split}
+        u_{OZ}(I_{oz})&=\sqrt{\left(\frac{\partial I}{\partial R} \cdot u(R)\right)^2+\left(\frac{\partial I}{\partial U} \cdot u(U)\right)^2+\left(u(I_0)\right)^2}\\
+        u_{OZ}(I_{oz})&=\sqrt{\left(-\frac{U}{R^2}\cdot u(R)\right)^2+\left(\frac{1}{R}\cdot u(U)\right)^2+\left(u(I_0)\right)^2}\\
+    \end{split}
+    \label{eq:oz_nejistota}
+\end{equation}
+Po dosazení dostaneme:
+\begin{equation*}
+    u_{OZ}(I_{oz})=\sqrt{\left(\frac{U}{R^2}\cdot u(R)\right)^2+\left(-\frac{1}{R}\cdot u(U)\right)^2+\left(u(I_0)\right)^2}
+\end{equation*}
 
-\section{Zpracování naměřených hodnot}
+\subsection{Chyba měření mikroampérmetrů}
+Pro zjištění relativní hodnoty musíme nejdříve znát absolutní chybu $\Delta_{\textrm{met}}$, kterou spočítáme jako
+\begin{equation}
+    \Delta_{\textrm{met}} = N - S.
+    \label{eq:abs}
+\end{equation}
+Absolutní chybu metody následně spočítáme pomocí rovnice 
+\begin{equation}
+    \delta_{\textrm{met}} = \frac{\Delta_{\textrm{met}}}{S}.
+    \label{eq:rel}
+\end{equation}
+Rovnice \ref{eq:rel} jde poté upravit do tvaru:
+\begin{equation}
+    \delta_{\textrm{met}} = \frac{N-S}{S},
+\end{equation}
+kde $N$ je naměřená hodnota a $S$ je skutečná hodnota. Jelikož jsme stanovili odpor UI převodníku za nulový, můžeme hodnotu jím naměřenou považovat za skutečnou a hodnotu naměřenou ručičkovým resp. číslicovým ampérmetrem s ní porovnávat.
 
+Jednotlivé relativní chyby pro analogový ampérmetr a číslicový ampérmetr s dvěma různými rozsahy jsou v tabulce \ref{tab:rel}.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \rule{0pt}{2.5ex}
+        \multirow{2}{*}{Napětí na děliči} &Ručičkový \tmu ampérmetr	&GDM-8145 	&GDM-8145 \\[.7ex]
+        & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA \\\hline\hline
+        0,02&-0,419354839&-0,141935484&-0,225806452 \\\hline
+        0,03&-0,494584838&-0,14801444&-0,133574007  \\\hline
+        0,04&-0,553571429&-0,176339286&-0,084821429 \\\hline
+        0,05&-0,619883041&-0,211988304&-0,064327485 \\\hline
+        0,06&-0,673913043&-0,260869565&-0,061264822 \\\hline
+        0,07&-0,725839616&-0,31459904&-0,067854695  \\\hline
+        0,08&-0,767216295&-0,371483996&-0,0785645   \\\hline
+        0,09&-0,816881758&-0,429019881&-0,093128706 \\\hline
+        0,10&-0,836984208&-0,484717269&-0,111054508  \\\hline
+    \end{tabular}
+    \caption{Relativní chyby metody}
+    \label{tab:rel}
+\end{table}
+V absolutní hodnotě jsou data v tabulce \ref{tab:rel_percent}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \rule{0pt}{2.5ex}
+        \multirow{2}{*}{Napětí na děliči} &Ručičkový \tmu ampérmetr	&GDM-8145 	&GDM-8145 \\[.7ex]
+        & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA \\\hline\hline
+        0,02&41,94&14,19&22,58  \\\hline
+        0,03&49,46&14,80&13,36  \\\hline
+        0,04&55,36&17,63&8,48   \\\hline
+        0,05&61,99&21,20&6,43   \\\hline
+        0,06&67,39&26,09&6,13   \\\hline
+        0,07&72,58&31,46&6,79   \\\hline
+        0,08&76,72&37,15&7,86   \\\hline
+        0,09&81,69&42,90&9,31   \\\hline
+        0,10&83,70&48,47&11,11  \\\hline
+    \end{tabular}
+    \caption{Relativní chyby metody}
+    \label{tab:rel_percent}
+\end{table}
+Chyba metody je zobrazena v grafu \ref{graf:chyba}.
+\begin{figure}
+    \centering
+    \includegraphics[width=.8\textwidth]{graf_chyba.pdf}
+    \caption{Relativní chyba metody v závislosti na měřeném napětí}
+    \label{graf:chyba}
+\end{figure}
 
 \section{Závěrečné vyhodnocení}
 
