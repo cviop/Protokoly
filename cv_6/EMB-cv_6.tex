@@ -29,7 +29,7 @@
 \usepackage{lastpage}                   %zjištění poslední stránky \pageref{LastPage}
 \usepackage{float}                      
 \usepackage{url}
-\usepackage[unicode]{hyperref}          %klikaci odkazy v textu
+\usepackage[unicode]{hyperref}          %klikaci odkazy v~textu
 \usepackage{mhchem}
 \usepackage{multirow}
 
@@ -42,7 +42,7 @@
 \renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional useful if paragraphs are to be numbered
 
 
-%------------------------ čtvrtá a pátá úroveň nadpisu ---------------------------
+%------------------------ čtvrtá a~pátá úroveň nadpisu ---------------------------
 
 \titleformat{\subsubsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
@@ -113,7 +113,7 @@
 \setcounter{page}{0} %cislo strany
 \pagestyle{empty} %stranku necislovat
 
-%prostredi pro grafy a schemata \begin{graf} \begin{schema}
+%prostredi pro grafy a~schemata \begin{graf} \begin{schema}
 \newfloat{schema}{htbp}{schema}\floatname{schema}{Schéma}
 \newfloat{graf}{htbp}{graf}\floatname{graf}{Graf}
 
@@ -160,14 +160,14 @@
 
 \label{zadani}
 \begin{enumerate}
-    \item V zapojení podle obr. \ref{fig:schema} změřte proud germaniovou diodou v propustném směru v oblasti malých napětí (20 až 100 mV) v pěti bodech charakteristiky:\label{jedna}
+    \item V zapojení podle obr. \ref{fig:schema} změřte proud germaniovou diodou v~propustném směru v~oblasti malých napětí (20 až 100 mV) v~pěti bodech charakteristiky:\label{jedna}
     \begin{enumerate}[label=\alph*)]
         \item analogovým mikroampérmetrem,\label{analog}
         \item číslicovým mikroampérmetrem na různých rozsazích,\label{digital}
         \item pomocí převodníku proud - napětí s operačním zesilovačem, u něhož před měřením určete velikost odporu zpětnovazebního rezistoru R tak, aby převod proud - napětí byl 10\texp{-5} A/V.
     \end{enumerate}
     \item Naměřené hodnoty vyneste do společného grafu.
-    \item Při měření dle \ref{jedna}\ref{analog} a \ref{jedna}\ref{digital} určete chybu metody způsobenou vnitřním odporem ampérmetru.
+    \item Při měření dle \ref{jedna}\ref{analog} a~\ref{jedna}\ref{digital} určete chybu metody způsobenou vnitřním odporem ampérmetru.
     \item Z naměřených hodnot určete \textbf{vnitřní odpory použitých mikroampérmetrů}.
 \end{enumerate}
 
@@ -190,9 +190,9 @@
 \begin{itemize}
     \item V\tsub{2} - voltmetr číslicový, typ ..., přesnost ...
     \item $\mu$A\tsub{1} - mikroampérmetr magnetoelektrický, tř.přes. 0,5, rozsah 150 \tmu A
-    \item $\mu$A\tsub{2} - mikroampérmetr číslicový, typ GDM-8145 přesnost \tpm (0,3 \% z rozsahu + 4 digity), rozsah 200\,\tmu A a 2\,mA
+    \item $\mu$A\tsub{2} - mikroampérmetr číslicový, typ GDM-8145 přesnost \tpm (0,3 \% z rozsahu + 4 digity), rozsah 200\,\tmu A a~2\,mA
     \item R - přesný rezistor nebo odporová dekáda, přesnost 0,1\,\% (příp. 0,2\,\%)
-    \item Př1 - přípravek s odporovým děličem a polovodičovou diodou
+    \item Př1 - přípravek s odporovým děličem a~polovodičovou diodou
     \item Př2 - přípravek s operačním zesilovačem
     \item U\tsub{1} - zdroj proměnného stejnosměrného napětí s číslicově nastavitelnou hodnotou 
     \item NZ - napájecí zdroj pro OZ
@@ -202,13 +202,13 @@
 
 \section{Teoretický úvod}
 
-Při měření malých proudů ručními ampérmetry nastává chyba měření. Ta je dána relativně vysokým odporem bočníku ampérmetru, na kterém měříme úbytek napětí. Dle obrázku \ref{fig:schema} je vidět, že odpor diody, která není vlivem nízkého napětí zcela otevřena, je srovnatelný s odporem ampérmetru. Vinou čehož vznikne dělič napětí se srovnatelnými úbytky napětí na diodě a na ampérmetru. Tato chyba metody jde kompenzovat zvýšením rozsahu a tedy snížením odporu. Zde se ale naměřená hodnota dostane na začátek rozsahu a vzniká zde opět nejistota měření daná \textit{chybou rozsahu}. 
+Při měření malých proudů ručními ampérmetry nastává chyba měření. Ta je dána relativně vysokým odporem bočníku ampérmetru, na kterém měříme úbytek napětí. Dle obrázku \ref{fig:schema} je vidět, že odpor diody, která není vlivem nízkého napětí zcela otevřena, je srovnatelný s odporem ampérmetru. Vinou čehož vznikne dělič napětí se srovnatelnými úbytky napětí na diodě a~na ampérmetru. Tato chyba metody jde kompenzovat zvýšením rozsahu a~tedy snížením odporu. Zde se ale naměřená hodnota dostane na začátek rozsahu a~vzniká zde opět nejistota měření daná \textit{chybou rozsahu}. 
 
 
 
 \section{Naměřené hodnoty}
 
-Změřená data jsou v tabulce \ref{tab:zmereno}.
+Změřená data jsou v~tabulce \ref{tab:zmereno}.
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
@@ -231,7 +231,7 @@ Změřená data jsou v tabulce \ref{tab:zmereno}.
     \label{tab:zmereno}
 \end{table}
 
-Námi změřené hodnoty mají různé předpony i jednotky. Je proto nutné je přepočítat na jednotné jednotky. Pro číslicový ampérmetr stačí hodnoty v mA vynásobit 1000, abychom dostali \tmu A. Pro spočtení napětí na výstupu operačního zesilovače platí:
+Námi změřené hodnoty mají různé předpony i jednotky. Je proto nutné je přepočítat na jednotné jednotky. Pro číslicový ampérmetr stačí hodnoty v~mA vynásobit 1000, abychom dostali \tmu A. Pro spočtení napětí na výstupu operačního zesilovače platí:
 \begin{equation}
     \begin{split}
         I_{in}&=-I_{out}\\
@@ -240,21 +240,21 @@ Námi změřené hodnoty mají různé předpony i jednotky. Je proto nutné je 
     \end{split}
     \label{eq:iu}
 \end{equation}
-kde $I_{out}$ je proud protékající diodou, $U_{out}$ je měřené napětí a $R$ je rezistor připojen mezi výstup a invertující vstup operačního zesilovače.
+kde $I_{out}$ je proud protékající diodou, $U_{out}$ je měřené napětí a~$R$ je rezistor připojen mezi výstup a~invertující vstup operačního zesilovače.
 
 
 
 \section{Zpracování naměřených hodnot}
 
 \subsection{Převod na stejné jednotky}
-Jelikož hodnoty napětí byly měřeny ve voltech a jednotné jednotky jsou \tmu A, je potřeba změřené napětí vydělit $-0,1\,\frac{\textrm{A}}{\textrm{V}}$. Přepočtené hodnoty jsou zapsána v tabulce \ref{tab:prepocteno} a zobrazena v grafu \ref{graf:hodnoty}.
+Jelikož hodnoty napětí byly měřeny ve voltech a~jednotné jednotky jsou \tmu A, je potřeba změřené napětí vydělit $-0,1\,\frac{\textrm{A}}{\textrm{V}}$. Přepočtené hodnoty jsou zapsány v~tabulce \ref{tab:prepocteno} a~zobrazeny v~grafu \ref{graf:hodnoty}.
 
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
         \rule{0pt}{2.5ex}
-        \multirow{2}{*}{Napětí na děliči $\frac{U}{\textrm{V}}$}& Ručičkový \tmu ampérmetr$\frac{U}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&GDM-8145 $\frac{U}{\mu\textrm{A}}$	&IU Převodník $\frac{I}{\mu\textrm{A}}$  \\[.7ex]
+        \multirow{2}{*}{Napětí na děliči $\frac{U}{\textrm{V}}$}& Ručičkový \tmu ampérmetr$\frac{I}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{I}{\mu\textrm{A}}$	&GDM-8145 $\frac{I}{\mu\textrm{A}}$	&IU Převodník $\frac{I}{\mu\textrm{A}}$  \\[.7ex]
         & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA & rozsah  2 V\\\hline\hline
         0,02    &0,9    &1,33   &1,2    &1,55   \\\hline
         0,03    &1,4    &2,36   &2,4    &2,77   \\\hline
@@ -284,12 +284,12 @@ a pro rozsah 2\,mA
     i(I_{čv}) = \frac{\delta_1 X + \delta_2 M}{100\sqrt{3}} = \frac{0,3\,\%\cdot I[\mu \textrm{A}]+2\cdot\frac{2\cdot 10^3}{20000}}{100\sqrt{3}}\, \mu \textrm{A.}
 \end{equation}
 
-Výsledné nejistoty jsou v tabulce \ref{tab:nejistoty}.
+Výsledné nejistoty jsou v~tabulce \ref{tab:nejistoty}.
 \begin{table}
     \centering
     \begin{tabular}{|c|c|c|}
-        \hline
-        \multirow{2}{*}{Napětí na děliči}& GDM-8145 	&GDM-8145 \\[.7ex]
+        \hline\rule{0pt}{2.5ex}
+        \multirow{2}{*}{Napětí na děliči}& GDM-8145 $\frac{I}{\mu\textrm{A}}$ 	&GDM-8145 $\frac{I}{\mu\textrm{A}}$ \\[.7ex]
         & rozsah 200~μA & rozsah  2~mA \\\hline\hline
         0,02&0,000139&0,001175\\\hline
         0,03&0,000156&0,001196\\\hline
@@ -301,7 +301,7 @@ Výsledné nejistoty jsou v tabulce \ref{tab:nejistoty}.
         0,09&0,000399&0,001605\\\hline
         0,10&0,000466&0,001759\\\hline
     \end{tabular}
-    \caption{Nejistoty měření pro různé rozsahy a hodnoty}
+    \caption{Nejistoty měření pro různé rozsahy a~hodnoty}
     \label{tab:nejistoty}
 \end{table}
 
@@ -313,7 +313,7 @@ Výsledné nejistoty jsou v tabulce \ref{tab:nejistoty}.
 \end{graf}
 
 \subsection{Nejistota IU převodníku}
-Pro určení nejistoty měření proudu z měření napětí musíme parciálně zderivovat rovnici \ref{eq:iu} podle všech proměnných. Celý postup je v rovnici \ref{eq:oz_nejistota}.
+Pro určení nejistoty měření proudu z měření napětí musíme parciálně zderivovat rovnici \ref{eq:iu} podle všech proměnných. Celý postup je v~rovnici \ref{eq:oz_nejistota}.
 \begin{equation}
     \begin{split}
         u_{OZ}(I_{oz})&=\sqrt{\left(\frac{\partial I}{\partial R} \cdot u(R)\right)^2+\left(\frac{\partial I}{\partial U} \cdot u(U)\right)^2+\left(u(I_0)\right)^2}\\
@@ -341,9 +341,9 @@ Rovnice \ref{eq:rel} jde poté upravit do tvaru:
 \begin{equation}
     \delta_{\textrm{met}} = \frac{N-S}{S},
 \end{equation}
-kde $N$ je naměřená hodnota a $S$ je skutečná hodnota. Jelikož jsme stanovili odpor UI převodníku za nulový, můžeme hodnotu jím naměřenou považovat za skutečnou a hodnotu naměřenou ručičkovým resp. číslicovým ampérmetrem s ní porovnávat.
+kde $N$ je naměřená hodnota a~$S$ je skutečná hodnota. Jelikož jsme stanovili odpor UI převodníku za nulový, můžeme hodnotu jím naměřenou považovat za skutečnou a~hodnotu naměřenou ručičkovým resp. číslicovým ampérmetrem s ní porovnávat.
 
-Jednotlivé relativní chyby pro analogový ampérmetr a číslicový ampérmetr s dvěma různými rozsahy jsou v tabulce \ref{tab:rel}.
+Jednotlivé relativní chyby pro analogový ampérmetr a~číslicový ampérmetr s dvěma různými rozsahy jsou v~tabulce \ref{tab:rel}.
 
 \begin{table}[h!]
     \centering
@@ -365,7 +365,7 @@ Jednotlivé relativní chyby pro analogový ampérmetr a číslicový ampérmetr
     \caption{Relativní chyby metody}
     \label{tab:rel}
 \end{table}
-V absolutní hodnotě jsou data v tabulce \ref{tab:rel_percent}
+V absolutní hodnotě jsou data v~tabulce \ref{tab:rel_percent}
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|}
@@ -383,48 +383,23 @@ V absolutní hodnotě jsou data v tabulce \ref{tab:rel_percent}
         0,09&81,69&42,90&9,31   \\\hline
         0,10&83,70&48,47&11,11  \\\hline
     \end{tabular}
-    \caption{Relativní chyby metody v procentech}
+    \caption{Relativní chyby metody v~procentech}
     \label{tab:rel_percent}
 \end{table}
-Chyba metody je zobrazena v grafu \ref{graf:chyba}.
+Chyba metody je zobrazena v~grafu \ref{graf:chyba}.
 \begin{graf}
     \centering
     \includegraphics[width=.8\textwidth]{graf_chyba.pdf}
-    \caption{Relativní chyba metody v závislosti na měřeném napětí}
+    \caption{Relativní chyba metody v~závislosti na měřeném napětí}
     \label{graf:chyba}
 \end{graf}
-Z tabulky \ref{tab:rel} můžeme spočítat nejistotu podle vzorce \ref{eq:chyba2nejistota}, čímž dostaneme tabulku \ref{tab:chyba2nejistota}.
-\begin{equation}
-    u_b(I)=\frac{\Delta}{\sqrt{3}}
-    \label{eq:chyba2nejistota}
-\end{equation}
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|}
-        \hline
-        \rule{0pt}{2.5ex}
-        \multirow{2}{*}{Napětí na děliči} &Ručičkový \tmu ampérmetr	$\frac{U}{\mu\textrm{A}}$&GDM-8145 	$\frac{U}{\mu\textrm{A}}$&GDM-8145 $\frac{U}{\mu\textrm{A}}$\\[.7ex]
-        & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA \\\hline\hline
-        0,02 & 0,2421 & 0,0819 & 0,1304 & \\\hline
-        0,03 & 0,2855 & 0,0855 & 0,0771 & \\\hline
-        0,04 & 0,3196 & 0,1018 & 0,0490 & \\\hline
-        0,05 & 0,3579 & 0,1224 & 0,0371 & \\\hline
-        0,06 & 0,3891 & 0,1506 & 0,0354 & \\\hline
-        0,07 & 0,4191 & 0,1816 & 0,0392 & \\\hline
-        0,08 & 0,4430 & 0,2145 & 0,0454 & \\\hline
-        0,09 & 0,4716 & 0,2477 & 0,0538 & \\\hline
-        0,10 & 0,4832 & 0,2799 & 0,0641 & \\\hline
-    \end{tabular}
-    \caption{Nejistota měření vypočtená z chyby měření}
-    \label{tab:chyba2nejistota}
-\end{table}
 
 \subsection{Měření vnitřního odporu ampérmetru}
-Pro jednotlivé kroky napětí použijeme ohmův zákon pro výpočet odporu diody a tento odpor následně odečteme od celkového odporu tj. i s ampérmetrem. Platí tedy následující rovnice:
+Pro jednotlivé kroky napětí použijeme ohmův zákon pro výpočet odporu diody a~tento odpor následně odečteme od celkového odporu tj. i s ampérmetrem. Platí tedy následující rovnice:
 \begin{equation}
     R_A=\frac{U}{I_A} - \frac{U}{I_ref},
 \end{equation}
-kde $U$ je napětí na děliči, $I_A$ je proud změřený ampérmetrem, který nás zajímá a $I_{ref}$ je referenční hodnota proudu - proud změřená UI převodníkem. Dosazením dat do vzorce dostaneme následující tabulku \ref{tab:odpor} a graf \ref{graf:odpor}.
+kde $U$ je napětí na děliči, $I_A$ je proud změřený ampérmetrem, který nás zajímá a~$I_{ref}$ je referenční hodnota proudu - proud změřená UI převodníkem. Dosazením dat do vzorce dostaneme následující tabulku \ref{tab:odpor} a~graf \ref{graf:odpor}.
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|}
@@ -432,15 +407,15 @@ kde $U$ je napětí na děliči, $I_A$ je proud změřený ampérmetrem, který 
         \rule{0pt}{2.5ex}
         \multirow{2}{*}{Napětí na děliči} &Ručičkový \tmu ampérmetr	$\frac{R}{\Omega}$ &GDM-8145 $\frac{R}{\Omega}$	&GDM-8145 $\frac{R}{\Omega}$\\[.7ex]
         & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA \\\hline\hline
-        0,02&9319&2134&3763\\\hline
-        0,03&10598&1882&1670\\\hline
-        0,04&11071&1912&828\\\hline
-        0,05&11921&1966&503\\\hline
-        0,06&12253&2093&387\\\hline
-        0,07&12702&2202&349\\\hline
-        0,08&12787&2293&331\\\hline
-        0,09&14004&2359&322\\\hline
-        0,10&13078&2396&318\\\hline
+        0,02 & 9319  & 2134 & 3763 \\\hline
+        0,03 & 10598 & 1882 & 1670 \\\hline
+        0,04 & 11071 & 1912 & 828  \\\hline
+        0,05 & 11921 & 1966 & 503  \\\hline
+        0,06 & 12253 & 2093 & 387  \\\hline
+        0,07 & 12702 & 2202 & 349  \\\hline
+        0,08 & 12787 & 2293 & 331  \\\hline
+        0,09 & 14004 & 2359 & 322  \\\hline
+        0,10 & 13078 & 2396 & 318  \\\hline
     \end{tabular}
     \caption{Spočítaný vnitřní odpor ampérmetrů}
     \label{tab:odpor}
@@ -454,7 +429,7 @@ kde $U$ je napětí na děliči, $I_A$ je proud změřený ampérmetrem, který 
 \end{graf}
 
 \section{Závěrečné vyhodnocení}
-Zjistili jsme, že při měření malých proudů je měření zatíženo relativně velkou chybou. U ručičkového přístroje relativní chyba dosahovala hodnoty až 83\,\% a u číslicového přístroje šlo o relativní chybu 48\,\% v rozsahu \tmu A a 11\,\% v rozsahu 2\,mA.
+Zjistili jsme, že při měření malých proudů je měření zatíženo relativně velkou chybou. U ručičkového přístroje relativní chyba dosahovala hodnoty až 83\,\% a~u číslicového přístroje šlo o relativní chybu 48\,\% v~rozsahu \tmu A a~11\,\% v~rozsahu 2\,mA. Bohužel při vyšším rozsahu se posouvá hodnota na začátek rozsahu a~tím se zvyšuje nejistota typu B, jak je vidět v~tabulce \ref{tab:nejistoty}. Nejlepší možností je tedy použít operační zesilovač, díky kterému docílíme téměř nulového odporu.
 
 
 
