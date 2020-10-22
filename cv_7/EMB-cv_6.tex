@@ -395,41 +395,29 @@ Chyba metody je zobrazena v~grafu \ref{graf:chyba}.
 \end{graf}
 
 \subsection{Měření vnitřního odporu ampérmetru}
-Pro jednotlivé kroky napětí použijeme ohmův zákon pro výpočet odporu diody a~tento odpor následně odečteme od celkového odporu tj. i s ampérmetrem. Platí tedy následující rovnice:
-\begin{equation}
-    R_A=\frac{U}{I_A} - \frac{U}{I_ref},
-\end{equation}
-kde $U$ je napětí na děliči, $I_A$ je proud změřený ampérmetrem, který nás zajímá a~$I_{ref}$ je referenční hodnota proudu - proud změřená UI převodníkem. Dosazením dat do vzorce dostaneme následující tabulku \ref{tab:odpor} a~graf \ref{graf:odpor}.
+Pro měření odporu ampérmetru musíme nejdříve znát odpor diody pro dané napětí na diodě. Bohužel po připojení ampérmetru do obvodu snížíme napětí na diodě a tím se, vinou nekonstantnosti odporu diody, její odpor sníží. Musíme proto graficky odečíst, pro jaké napájecí napětí diody a ampérmetru platí, že proud skrz je roven proudu pouze diodou. Tím, že bude obvodem protékat stejný proud, docílíme, že dioda bude stejně otevřena resp. její odpor bude stejný a úbytek napětí na diodě bude roven napájecímu napětí diody samotné. Rozdíl napájecího napětí diody a úbytku napětí na diodě je roven napětí na ampérmetru. Poté si s použitím ohmova zákona dopočítáme odpor ampérmetru.
+
+\subsubsection{Ručičkový ampérmetr}
+Podle tabulky \ref{tab:prepocteno} lze zjistit, že při proudu 4,48\,\tmu A je na diodě úbytek napětí 0,04\,A. Podle grafu \ref{graf:hodnoty} odečteme napájecí napětí pro další způsoby měření. Napájecí napětí a výsledné odpory jsou v tabulce \ref{tab:napajeni}.
 \begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|c|}
         \hline
         \rule{0pt}{2.5ex}
-        \multirow{2}{*}{Napětí na děliči} &Ručičkový \tmu ampérmetr	$\frac{R}{\Omega}$ &GDM-8145 $\frac{R}{\Omega}$	&GDM-8145 $\frac{R}{\Omega}$\\[.7ex]
+        \multirow{2}{*}{} &Ručičkový \tmu ampérmetr	&GDM-8145 	&GDM-8145 \\[.7ex]
         & rozsah  150~μA & rozsah 200~μA & rozsah  2~mA \\\hline\hline
-        0,02 & 9319  & 2134 & 3763 \\\hline
-        0,03 & 10598 & 1882 & 1670 \\\hline
-        0,04 & 11071 & 1912 & 828  \\\hline
-        0,05 & 11921 & 1966 & 503  \\\hline
-        0,06 & 12253 & 2093 & 387  \\\hline
-        0,07 & 12702 & 2202 & 349  \\\hline
-        0,08 & 12787 & 2293 & 331  \\\hline
-        0,09 & 14004 & 2359 & 322  \\\hline
-        0,10 & 13078 & 2396 & 318  \\\hline
+        Napájecí napětí & 0,076 V& 0,0446 V & 0,0416 V\\\hline
+        Výsledný odpor & 8036 $\Omega$  & 1026 $\Omega$ & 357,2 $\Omega$   \\\hline
+        
     \end{tabular}
-    \caption{Spočítaný vnitřní odpor ampérmetrů}
-    \label{tab:odpor}
+    \caption{Relativní chyby metody v~procentech}
+    \label{tab:napajeni}
 \end{table}
 
-\begin{graf}[h!]
-    \centering
-    \includegraphics[width=.8\textwidth]{graf_odpor.pdf}
-    \caption{Závislost naměřeného odporu na vstupním napětí}
-    \label{graf:odpor}
-\end{graf}
+
 
 \section{Závěrečné vyhodnocení}
-Zjistili jsme, že při měření malých proudů je měření zatíženo relativně velkou chybou. U ručičkového přístroje relativní chyba dosahovala hodnoty až 83\,\% a~u číslicového přístroje šlo o relativní chybu 48\,\% v~rozsahu \tmu A a~11\,\% v~rozsahu 2\,mA. Bohužel při vyšším rozsahu se posouvá hodnota na začátek rozsahu a~tím se zvyšuje nejistota typu B, jak je vidět v~tabulce \ref{tab:nejistoty}. Nejlepší možností je tedy použít operační zesilovač, díky kterému docílíme téměř nulového odporu.
+Zjistili jsme, že při měření malých proudů je měření zatíženo relativně velkou chybou resp. relativně velkou relativní chybou. U ručičkového přístroje relativní chyba dosahovala hodnoty až 83\,\% a~u číslicového přístroje šlo o relativní chybu 48\,\% v~rozsahu 200\,\tmu A a~11\,\% v~rozsahu 2\,mA. Bohužel při vyšším rozsahu se posouvá hodnota na začátek rozsahu a~tím se zvyšuje nejistota typu B, jak je vidět v~tabulce \ref{tab:nejistoty}. Nejlepší možností je tedy použít operační zesilovač, díky kterému docílíme téměř nulového odporu.
 
 
 
