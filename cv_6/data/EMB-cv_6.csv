@@ -1,6 +1,6 @@
-PÞepo‹tenŽ napžt’;;;;
+Pï¿½epoï¿½tenï¿½ napï¿½tï¿½;;;;
 ;;;;
-Vstupn’ napžt’;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A [_A] ";"GDM-8145; rozsah 200 _A [_A]";"GDM-8145; rozsah 2 mA [mA]";"IU PÞevodn’k; rozsah 2 V [V]"
+Vstupnï¿½ napï¿½tï¿½;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A [_A] ";"GDM-8145; rozsah 200 _A [_A]";"GDM-8145; rozsah 2 mA [mA]";"IU Pï¿½evodnï¿½k; rozsah 2 V [V]"
 0,2;0,9;1,33;0,0012;-0,0155
 0,3;1,4;2,36;0,0024;-0,0277
 0,4;2;3,69;0,0041;-0,0448
@@ -14,9 +14,9 @@ Vstupn’ napžt’;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A [_A] ";"GDM-8145; rozsah
 ;;;;
 ;;;; 
 ;;;;
-PÞepo‹tenù proud;;;;
+Pï¿½epoï¿½tenï¿½ proud;;;;
 ;;;;
-Namžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";"IU PÞevodn’k; rozsah 2 V"
+Namï¿½tï¿½ na dï¿½liï¿½i;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";"IU Pï¿½evodnï¿½k; rozsah 2 V"
 0,02;0,9;1,33;1,2;1,55
 0,03;1,4;2,36;2,4;2,77
 0,04;2;3,69;4,1;4,48
@@ -29,9 +29,9 @@ Namžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200
 ;;;;
 ;;;;
 ;;;;
-Relativn’ chyba metody;;;;
+Relativnï¿½ chyba metody;;;;
 ;;;;
-Namžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
+Namï¿½tï¿½ na dï¿½liï¿½i;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
 0,02;-0,4194;-0,1419;-0,2258;
 0,03;-0,4946;-0,1480;-0,1336;
 0,04;-0,5536;-0,1763;-0,0848;
@@ -45,9 +45,9 @@ Namžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200
 ;;;;
 ;;;;
 ;;;;
-Relativn’ chyba metody;;;;
+Relativnï¿½ chyba metody;;;;
 ;;;;
-Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
+Napï¿½tï¿½ na dï¿½liï¿½i;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
 0,02;41,94;14,19;22,58;
 0,03;49,46;14,80;13,36;
 0,04;55,36;17,63;8,48;
@@ -58,9 +58,9 @@ Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200
 0,09;81,69;42,90;9,31;
 0,10;83,70;48,47;11,11;
 ;;;;
-Odpor ampŽrmetru;;;;
+Odpor ampï¿½rmetru;;;;
 ;;;;
-Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
+Napï¿½tï¿½ na dï¿½liï¿½i;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
 0,02;9319;2134;3763;
 0,03;10598;1882;1670;
 0,04;11071;1912;828;
@@ -71,9 +71,9 @@ Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200
 0,09;14004;2359;322;
 0,10;13078;2396;318;
 ;;;;
-Nejistota mžÞen’;;;;
+Nejistota mï¿½ï¿½enï¿½;;;;
 ;;;;
-Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
+Napï¿½tï¿½ na dï¿½liï¿½i;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
 0,02;0,433013;0,000139;0,001175;
 0,03;;0,000156;0,001196;
 0,04;;0,000179;0,001226;
@@ -84,9 +84,9 @@ Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200
 0,09;;0,000399;0,001605;
 0,10;;0,000466;0,001759;
 ;;;;
-Nejistota z chyby mžÞen’;;;;
+Nejistota z chyby mï¿½ï¿½enï¿½;;;;
 ;;;;
-Napžt’ na džli‹i;"Ru‹i‹kovù mikroampŽrmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
+Napï¿½tï¿½ na dï¿½liï¿½i;"Ruï¿½iï¿½kovï¿½ mikroampï¿½rmetr; rozsah 150 _A";"GDM-8145; rozsah 200 _A";"GDM-8145; rozsah 2 mA";
 0,02;0,2421;0,0819;0,1304;
 0,03;0,2855;0,0855;0,0771;
 0,04;0,3196;0,1018;0,0490;

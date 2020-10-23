@@ -29,7 +29,7 @@
 \usepackage{lastpage}                   %zjištění poslední stránky \pageref{LastPage}
 \usepackage{float}                      
 \usepackage{url}
-\usepackage[unicode]{hyperref}          %klikaci odkazy v textu
+\usepackage[unicode]{hyperref}          %klikaci odkazy v~textu
 \usepackage{mhchem}
 \usepackage{multirow}
 
@@ -42,7 +42,7 @@
 \renewcommand\theparagraph{\thesubsubsubsection.\arabic{paragraph}} % optional; useful if paragraphs are to be numbered
 
 
-%------------------------ čtvrtá a pátá úroveň nadpisu ---------------------------
+%------------------------ čtvrtá a~pátá úroveň nadpisu ---------------------------
 
 \titleformat{\subsubsubsection}
   {\normalfont\normalsize\bfseries}{\thesubsubsubsection}{1em}{}
@@ -119,7 +119,7 @@
 \setcounter{page}{0} %cislo strany
 \pagestyle{empty} %stranku necislovat
 
-%prostredi pro grafy a schemata \begin{graf} \begin{schema}
+%prostredi pro grafy a~schemata \begin{graf} \begin{schema}
 \newfloat{schema}{htbp}{schema}\floatname{schema}{Schéma}
 \newfloat{graf}{htbp}{graf}\floatname{graf}{Graf}
 
@@ -165,12 +165,12 @@
 \section{Úkol měření}
 \label{zadani}
 \begin{enumerate}
-    \item Změřte závislost střední hodnoty výstupního proudu na efektivní hodnotě vstupního napětí polovodičového usměrňovače v Graetzově zapojení, zatíženého rezistorem \ri = 100~\tohm. Střední hodnotu výstupního proud určete z úbytku napětí na tomto odporu (zapojení dle obr. 1, rozsah stejnosměrného voltmetru \vii~nastavte 200~mV) a jeho průběh sledujte osciloskopem.
-    \item Před polovodičový usměrňovač v Graetzově zapojení zařaďte odporovou dekádu RD (viz obr. 2) a experimentálně nastavte hodnotu odporu RD takovou, aby z této kombinace vznikl střídavý číslicový voltmetr s rozsahem 2~V (rozsah stejnosměrného voltmetru \vii~nastavte 200~mV). Změřte závislost stejnosměrného výstupního napětí \uii~na efektivní hodnotě napětí vstupního. Průběh napětí na zatěžovacím rezistoru \rii~sledujte osciloskopem.
-    \item Voltmetr se stejným rozsahem jako v bodě 2 realizujte pomocí operačního zesilovače s usměrňovačem ve zpětné vazbě podle schématu na obr. 3a nebo 3b. Odvoďte příslušný vztah a vypočtěte hodnotu odporu R\tsub{D} tak, aby efektivní hodnotě vstupního napětí 1~V odpovídala střední hodnota napětí na rezistoru R\tsub{1} U\tsub{R\tsub{1}}~= 100~mV. Experimentálně dostavte hodnotu odporu R\tsub{D}~tak, aby byl tento požadavek skutečně splněn, a vysvětlete případný rozdíl oproti vypočtené hodnotě.
+    \item Změřte závislost střední hodnoty výstupního proudu na efektivní hodnotě vstupního napětí polovodičového usměrňovače v~Graetzově zapojení, zatíženého rezistorem \ri = 100~\tohm. Střední hodnotu výstupního proud určete z úbytku napětí na tomto odporu (zapojení dle obr. 1, rozsah stejnosměrného voltmetru \vii~nastavte 200~mV) a~jeho průběh sledujte osciloskopem.
+    \item Před polovodičový usměrňovač v~Graetzově zapojení zařaďte odporovou dekádu RD (viz obr. 2) a~experimentálně nastavte hodnotu odporu RD takovou, aby z této kombinace vznikl střídavý číslicový voltmetr s rozsahem 2~V (rozsah stejnosměrného voltmetru \vii~nastavte 200~mV). Změřte závislost stejnosměrného výstupního napětí \uii~na efektivní hodnotě napětí vstupního. Průběh napětí na zatěžovacím rezistoru \rii~sledujte osciloskopem.
+    \item Voltmetr se stejným rozsahem jako v~bodě 2 realizujte pomocí operačního zesilovače s usměrňovačem ve zpětné vazbě podle schématu na obr. 3a nebo 3b. Odvoďte příslušný vztah a~vypočtěte hodnotu odporu R\tsub{D} tak, aby efektivní hodnotě vstupního napětí 1~V odpovídala střední hodnota napětí na rezistoru R\tsub{1} U\tsub{R\tsub{1}}~= 100~mV. Experimentálně dostavte hodnotu odporu R\tsub{D}~tak, aby byl tento požadavek skutečně splněn, a~vysvětlete případný rozdíl oproti vypočtené hodnotě.
     \item Opět změřte závislost stejnosměrného výstupního napětí na efektivní hodnotě napětí vstupního. Osciloskopem sledujte nejen průběh proudu, ale i průběh napětí na výstupu OZ. Vysvětlete funkci OZ jako zdroje proudu.
 \end{enumerate}
-\textit{Poznámka}: Každou závislost změřte v 7 bodech (pro napětí U\tsub{2}~= 5; 10; 25; 50; 100; 150; 200 mV měřené voltmetrem V\tsub{2}). Naměřené průběhy vyneste do společného grafu.
+\textit{Poznámka}: Každou závislost změřte v~7 bodech (pro napětí U\tsub{2}~= 5; 10; 25; 50; 100; 150; 200 mV měřené voltmetrem V\tsub{2}). Naměřené průběhy vyneste do společného grafu.
 
 \section{Schéma zapojení}
 \label{schema_zapojeni}
@@ -198,12 +198,12 @@
     \item \vi~Analogový voltmetr střídavý, tř přesnosti 1,5, rozsahy 2,4~V, 6~V
     \item \vii~Digitální multimetr DM-4418, rozsah 200~mV, přesnost (0,1~\% z údaje + 4 digity)\
     \item $Osc$ Osciloskop GoldStar OS-9020G, 20~MHz
-    \item $Př_1$ Přípravek s dvoucestným usměrňovačem, zatěžovacím rezistorem \ri~ a RC filtrem
-    \item $Př_12$ Přípravek s operačním zesilovačem
+    \item $Př_1$ Přípravek s dvoucestným usměrňovačem, zatěžovacím rezistorem \ri~ a~RC filtrem
+    \item $Př_2$ Přípravek s operačním zesilovačem
 \end{itemize}
 
 \section{Teoretický úvod}
-Při měření střídavého napětí je nutno průběh napětí usměrnit. Nejjednodušším způsobem je použití diod v můstku. Jejich nelineární VA charakteristika jim ale nedovoluje přesné měření v oblasti, kdy se napětí na diodách pohybuje pod, nebo v oblasti dopředného napětí. Tato vlastnost jde kompenzovat předřadným odporem, čímž zlinearizujeme větší část u počátku, ale stále se jedná o nelineární charakteristiku. Měřící přístroje využívající diodového můstku často nemají při začátku rozsahu stupnici, jelikož nelze provést přesné měření. Řešením je použití můstku s operačním zesilovačem ve zpětné vazbě viz obr. \ref{fig:op}.
+Při měření střídavého napětí je nutno průběh napětí usměrnit. Nejjednodušším způsobem je použití diod v~můstku. Jejich nelineární VA charakteristika jim ale nedovoluje přesné měření v~oblasti, kdy se napětí na diodách pohybuje pod, nebo v~oblasti dopředného napětí. Tato vlastnost jde kompenzovat předřadným odporem, čímž zlinearizujeme větší část u počátku, ale stále se jedná o nelineární charakteristiku. Měřící přístroje využívající diodového můstku často nemají při začátku rozsahu stupnici, jelikož nelze provést přesné měření. Řešením je použití můstku s operačním zesilovačem ve zpětné vazbě viz obr. \ref{fig:op}.
 
 Odpor odporové dekády $R_D$ vypočítáme následovně: 
 \begin{equation*}
@@ -219,12 +219,13 @@ Odpor odporové dekády $R_D$ vypočítáme následovně:
 
 
 \section{Naměřené hodnoty}
-Naměřené hodnoty jsou v tabulkách níže. Výstupní proud byl počítán jako $I_2=U_2/R_1$, kde $R_1$~=~100~\tohm.
+Naměřené hodnoty jsou v~tabulkách níže. Výstupní proud byl počítán jako $I_2=U_2/R_1$, kde $R_1$~=~100~\tohm.
 
-\begin{table}
+\begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|}
-        $U_{vstup}$ Analogový voltmetr [V] &$U_{2}$ DM-4418 [mV] &Výstupní proud [mA] \\\hline\hline
+        \hline
+        $U_{vstup}$ Analogový voltmetr [V] &$U_{2}$ DM-4418 [mV] &Výstupní proud [mA] \\\hline\hline
         1,18    &195,5  &1,955  \\\hline
         1,09    &149,45 &1,4945 \\\hline
         0,99    &103,25 &1,0325 \\\hline
@@ -237,10 +238,11 @@ Naměřené hodnoty jsou v tabulkách níže. Výstupní proud byl počítán ja
     \caption{První měření}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|}
-        $U_{vstup}$ Analogový voltmetr [V] &$U_{2}$ DM-4418 [mV] &Výstupní proud [mA] \\\hline\hline
+        \hline
+        $U_{vstup}$ Analogový voltmetr [V] &$U_{2}$ DM-4418 [mV] &Výstupní proud [mA] \\\hline\hline
         2,02&195,62&1,9562\\\hline
         1,74&151,38&1,5138\\\hline
         1,45&101,05&1,0105\\\hline
@@ -253,10 +255,11 @@ Naměřené hodnoty jsou v tabulkách níže. Výstupní proud byl počítán ja
     \caption{Druhé měření}
 \end{table}
 
-\begin{table}
+\begin{table}[h!]
     \centering
     \begin{tabular}{|c|c|c|}
-        $U_{vstup}$ Analogový voltmetr [V] &$U_{2}$ DM-4418 [mV] &Výstupní proud [mA] \\\hline\hline
+        \hline
+        $U_{vstup}$ Analogový voltmetr [V] &$U_{2}$ DM-4418 [mV] &Výstupní proud [mA] \\\hline\hline
         1&99,99&0,9999\\\hline
         0,72&71,62&0,7162\\\hline
         0,52&49,66&0,4966\\\hline
@@ -267,11 +270,23 @@ Naměřené hodnoty jsou v tabulkách níže. Výstupní proud byl počítán ja
     \caption{Třetí měření}
 \end{table}
 
+
 \section{Zpracování naměřených hodnot}
 
+\begin{graf}[h!]
+    \centering
+    \includegraphics[width=.7\textwidth]{napeti.pdf}
+    \caption{Závislost napětí na R1 v~závislosti na vstupním napětí}
+\end{graf}
+
+\begin{graf}[h!]
+    \centering
+    \includegraphics[width=.7\textwidth]{proud.pdf}
+    \caption{Závislost proudu skrz R1 v~závislosti na vstupním napětí}
+\end{graf}
 
 \section{Závěrečné vyhodnocení}
-
+Zjistili jsme, že diody se nechovají lineárně, pokud jde o malá napětí. To je způsobeno dopředným napětím, při kterém ze diody začínají výrazněji otevírat (dopředné napětí je dáno typem diody). Z grafů je vidět, že dopředné napětí pro naše diody se pohybuje kolem 0,7~V, což je typická hodnota. Také jsme ověřili, že při použití zpětné vazby pomocí operačního zesilovače můžeme dosáhnout velice lineární VA charakteristiky.
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
