@@ -30,7 +30,7 @@
 \usepackage{float}                      
 \usepackage{url}
 \usepackage[unicode]{hyperref}          %klikaci odkazy v~textu
-\usepackage{mhchem}b 
+\usepackage{mhchem}
 \usepackage{multirow}
 
 \usepackage{halloweenmath}
@@ -167,10 +167,30 @@
 
 \section{Schéma zapojení}
 \label{schema_zapojeni}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.6\textwidth]{kestewatt.png}
+  \caption{Měření činného výkonu, účiníku a zdánlivého výkonu pomocí univerzálního klešťového přístroje}
+  \label{fig:klestewatt}
+\end{figure}
 
-
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.6\textwidth]{rucwatt.png}
+  \caption{Zapojení pro měření činného výkonu jednofázové zátěže pomocí ručkového wattmetru}
+  \label{fig:rucwatt}
+\end{figure}
 
 \section{Seznam použitých přístrojů}
+\begin{tabular}{ll}
+  KL &    - univerzální klešťový přístroj s číslicovým zobrazením PK 430.1\\
+  A  &    - ampérmetr elektromagnetický, tř.přes. ..., použitý rozsah ...\\
+  V\tsub{1}  &- voltmetr magnetoelektrický s usměrňovačem, tř.přes. ..., použitý rozsah ..., odpor ...\\
+  W &     - wattmetr elektrodynamický, tř.přes. ..., napěťový rozsah ... V, proudový rozsah ... A, odpor napěťové cívky ... \\
+  MTP &   - měřicí transformátor proudu, převod ..., chyba fáze 30 úhl.minut, chyba převodu ... \\
+  120~V&  - zdroj střídavého napětí - rozvaděč\\
+  Z &     - měřená zátěž\\
+\end{tabular}
 
 \section{Teoretický úvod}
 
