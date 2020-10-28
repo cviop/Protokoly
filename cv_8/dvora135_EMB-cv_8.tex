@@ -32,6 +32,7 @@
 \usepackage[unicode]{hyperref}          %klikaci odkazy v~textu
 \usepackage{mhchem}
 \usepackage{multirow}
+\usepackage{tabularx}                   %tabulky se zalamovanim
 
 \usepackage{halloweenmath}
 
@@ -182,15 +183,18 @@
 \end{figure}
 
 \section{Seznam použitých přístrojů}
-\begin{tabular}{ll}
-  KL &    - univerzální klešťový přístroj s číslicovým zobrazením PK 430.1\\
-  A  &    - ampérmetr elektromagnetický, tř.přes. ..., použitý rozsah ...\\
-  V\tsub{1}  &- voltmetr magnetoelektrický s usměrňovačem, tř.přes. ..., použitý rozsah ..., odpor ...\\
-  W &     - wattmetr elektrodynamický, tř.přes. ..., napěťový rozsah ... V, proudový rozsah ... A, odpor napěťové cívky ... \\
-  MTP &   - měřicí transformátor proudu, převod ..., chyba fáze 30 úhl.minut, chyba převodu ... \\
-  120~V&  - zdroj střídavého napětí - rozvaděč\\
-  Z &     - měřená zátěž\\
-\end{tabular}
+\begin{table}[h!]
+  \begin{tabularx}{\textwidth}{lX}
+    KL &    - univerzální klešťový přístroj s číslicovým zobrazením PK 430.1\\
+    A  &    - ampérmetr elektromagnetický, tř.přes. 0,5, použitý rozsah 10~A\\
+    V\tsub{1}  &- voltmetr magnetoelektrický s usměrňovačem, tř.přes. 1,5, použitý rozsah 240, odpor 5000~\tohm , tj. 1,2~M~\tohm \\
+    W &     - wattmetr elektrodynamický, tř.přes. 0,5, napěťový rozsah 240~V, proudový rozsah 2~A, odpor napěťové cívky 8~k\tohm  \\
+    MTP &   - měřicí transformátor proudu, převod 1:3 chyba fáze 30~úhl.~minut, chyba převodu není známa \\
+    120~V&  - zdroj střídavého napětí - rozvaděč\\
+    Z &     - měřená zátěž\\
+  \end{tabularx}
+\end{table}
+
 
 \section{Teoretický úvod}
 
