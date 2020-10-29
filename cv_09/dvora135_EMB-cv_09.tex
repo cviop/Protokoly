@@ -179,13 +179,38 @@ V obou případech určete nepřesnost hodin v sekundách za den.
 
 \section{Schéma zapojení}
 \label{schema_zapojeni}
-
-
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.6\textwidth]{schema.png}
+  \caption{Schéma zapojení měření na přípravku}
+  \label{fig:schema}
+\end{figure}
 
 \section{Seznam použitých přístrojů}
-
+\begin{table}
+  \begin{tabular}{cc}
+    GENERÁTOR &- nízkofrekvenční generátor, typ ...\\
+    ČÍTAČ &- univerzální čítač, typ ...\\
+    PŘÍPRAVEK &- přípravek s hodinami řízenými krystalem\\
+  \end{tabular}
+\end{table}
 \section{Teoretický úvod}
-sdfa
+Měření frekvence a doby periody je zpravidla provázeno čítačem. Ten v závislosti na nastaveném typu měření měří následovně. Při měření frekvence ve vstupní signál upraven podle blokového schéma~\ref{schema:frce}. Signál prochází zesílením a tvarovačem, díky čemuž se stane vhodným pro hradlo. Toto hradlo počítá kmity za danou periodu. Ta je dána vnitřním krystalovým oscilátorem.
+
+Pro měření doby periody naopak použijeme zapojení podle schématu \ref{schema:perioda}. V tomto režimu vstupním signálem určujeme, jak dlouho bude hradlo otevřeno, zatímco mu z krystalového oscilátoru sypeme kmity, dokud to jde. Podle kmitů, které se vešly do doby jedné periody vstupního signálu poté určíme dobu periody.
+\begin{schema}[h!]
+  \centering
+  \includegraphics[width=.6\textwidth]{frce.png}
+  \caption{Režim měření frekvence}
+  \label{schema:frce}
+\end{schema}
+
+\begin{schema}[h!]
+  \centering
+  \includegraphics[width=.6\textwidth]{perioda.png}
+  \caption{Režim měření doby periody}
+  \label{schema:perioda}
+\end{schema}
 
 
 \section{Naměřené hodnoty}
