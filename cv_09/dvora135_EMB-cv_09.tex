@@ -93,6 +93,7 @@
 \newcommand{\tsub}[1]{$_\textrm{#1}$}
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tohm}{$\Omega$}
+\newcommand{\tmu}{$\mu$}
 
 
 %_______________________________________________________________________________________%
@@ -214,6 +215,44 @@ Pro měření doby periody naopak použijeme zapojení podle schématu \ref{sche
 
 
 \section{Naměřené hodnoty}
+Naměřená data z měření frekvenčního generátoru jsou v tabulce~\ref{tab:frce} a~\ref{tab:perioda}.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+      &60 Hz [Hz]&10 kHz [kHz]&100 kHz [kHz]\\\hline\hline
+    0,1 s&70&10,63&110,83\\\hline
+    1 s&68&10,622&110,828\\\hline
+    10 s&67,9&10,6231&110,8373\\\hline
+  \end{tabular}
+  \label{tab:frce}
+  \caption{Naměřené hodnoty frekvence}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    &60 Hz [\tmu s]&10 kHz [\tmu s]&100 kHz [\tmu s]\\\hline\hline
+    1 T&15100,7&93,6&9\\\hline
+    10 T &15101,87&93,64&-\\\hline
+    100 T&-&93,6488&-\\\hline
+    1000 T&-&93,63633&9,05553\\\hline
+  \end{tabular}
+  \label{tab:perioda}
+  \caption{Naměřené hodnoty periody}
+\end{table}
+
+Data z měření hodin jsou v tabulce~\ref{tab:hodiny}.
+
+\begin{table}
+  \begin{tabular}{|c|c|}
+    f [kHz]&T [\tmu s]\\\hline\hline
+    32,7677&2000038,9\\\hline
+  \end{tabular}
+  \caption{Hodnoty pro ručičkové hodiny}
+  \label{tab:hodiny}
+\end{table}
+
 
 
 
