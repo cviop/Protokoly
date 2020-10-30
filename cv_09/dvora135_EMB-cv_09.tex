@@ -257,8 +257,56 @@ Data z měření hodin jsou v tabulce~\ref{tab:hodiny}.
 
 
 \section{Zpracování naměřených hodnot}
+Pro určení nejistoty měření frekvence způsobenou rozlišením budeme vycházet ze vzorce \ref{eq:nejistota_frce}.
 
+\begin{equation}
+  u_{f_X} = \sqrt{\left(\delta'f_X/\sqrt{3}\right)^2+\left(\delta f_X/\sqrt{3}\right)^2}
+  \label{eq:nejistota_frce}
+\end{equation}
 
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    &60 Hz [Hz]&10 kHz [Hz]&100 kHz [Hz]\\\hline\hline
+    0,1&5,773502692&5,773502822&5,773516875\\\hline
+    1&0,577350269&0,577351572&0,577492082\\\hline
+    10&0,057735027&0,057748056&0,059136555\\\hline
+  \end{tabular}
+  \caption{Nejistoty měření frekvence}
+\end{table}
+
+Pro určení nejistoty měření doby periody způsobenou rozlišením budeme vycházet ze vzorce \ref{eq:nejistota_perioda}.
+
+\begin{equation}
+  u_{T_X} = \sqrt{\left(\delta'T_X/\sqrt{3}\right)^2+\left(\delta T_X/\sqrt{3}\right)^2+2u_k^2}
+  \label{eq:nejistota_perioda}
+\end{equation}
+
+Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme určit člen $u_k^2$ a budeme ho proto ignorovat. Nejistoty jsou dále v tabulce.
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    T, T= 1 \tmu s&60 Hz [\tmu s]&10 kHz [\tmu s]&100 kHz [\tmu s]\\\hline\hline
+    1&0,001743679&1,08234E-05&1,18884E-06\\\hline
+    10&0,001743823&1,22575E-05\\\hline&
+    100&&5,8739E-05\\\hline&
+    1000&&0,000577452&0,000577351\\\hline
+  \end{tabular}
+  \caption{Nejistoty měření periody}
+\end{table}
+
+Pro zjištění přesnosti hodin použijeme rovnice \ref{eq:presnost_T} a \ref{eq:presnost_f}. Budeme vycházet z toho, že den má $24\cdot 60\cdot 60 = 86\,400~s$. 
+
+\begin{equation}
+  \left(\frac{T_m}{T}-1\right)\cdot 86\,400~s = \frac{2,0000389}{2}-1~s = 1,68~\textrm{s/den}
+  \label{eq:presnost_T}
+\end{equation}
+
+\begin{equation}
+  \left(\frac{f_m}{f}-1\right)\cdot 86\,400~s = \frac{2,0000389}{2}-1~s = 1,68~\textrm{s/den}
+  \label{eq:presnost_T}
+\end{equation}
 
 \section{Závěrečné vyhodnocení}
 
