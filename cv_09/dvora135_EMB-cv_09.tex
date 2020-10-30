@@ -160,11 +160,11 @@
 \section{Úkol měření}
 \label{chap:zadani}
 \begin{enumerate}
-    \item Nakreslete blokové schéma čítače v obou režimech činnosti.
+    \item Nakreslete blokové schéma čítače v~obou režimech činnosti.
     \item Zkontrolujte správnost stupnice nízkofrekvenčního generátoru:
     \begin{enumerate}[label=\alph*)]
-        \item čítačem v režimu \textbf{měření frekvence při různých dobách měření},
-        \item čítačem v režimu \textbf{měření doby periody} jednak \textbf{přímo}, jednak \textbf{s využitím průměrování}.
+        \item čítačem v~režimu \textbf{měření frekvence při různých dobách měření},
+        \item čítačem v~režimu \textbf{měření doby periody} jednak \textbf{přímo}, jednak \textbf{s využitím průměrování}.
 
         Měřte při kmitočtech 60~Hz, 500~Hz, 5~kHz, 10~kHz, 20~kHz, 50~kHz, 100~kHz. U všech měření určete \textbf{nejistotu} měření \textbf{způsobenou rozlišením}.
     \end{enumerate}
@@ -174,7 +174,7 @@
         \item přímým měřením frekvence oscilátoru (správná hodnota je 2\texp{15}, tj. 32\,768~Hz, resp. 2\texp{22} tj.~4\,194\,304~Hz).
     \end{enumerate}
 \end{enumerate}
-V obou případech určete nepřesnost hodin v sekundách za den.
+V obou případech určete nepřesnost hodin v~sekundách za den.
 
 
 
@@ -196,7 +196,7 @@ V obou případech určete nepřesnost hodin v sekundách za den.
   \end{tabular}
 \end{table}
 \section{Teoretický úvod}
-Měření frekvence a doby periody je zpravidla provázeno čítačem. Ten v závislosti na nastaveném typu měření měří následovně. Při měření frekvence ve vstupní signál upraven podle blokového schéma~\ref{schema:frce}. Signál prochází zesílením a tvarovačem, díky čemuž se stane vhodným pro hradlo. Toto hradlo počítá kmity za danou periodu. Ta je dána vnitřním krystalovým oscilátorem.
+Měření frekvence a~doby periody je zpravidla provázeno čítačem. Ten v~závislosti na nastaveném typu měření měří následovně. Při měření frekvence ve vstupní signál upraven podle blokového schéma~\ref{schema:frce}. Signál prochází zesílením a~tvarovačem, díky čemuž se stane vhodným pro hradlo. Toto hradlo počítá kmity za danou periodu. Ta je dána vnitřním krystalovým oscilátorem.
 
 Pro měření doby periody naopak použijeme zapojení podle schématu \ref{schema:perioda}. V tomto režimu vstupním signálem určujeme, jak dlouho bude hradlo otevřeno, zatímco mu z krystalového oscilátoru sypeme kmity, dokud to jde. Podle kmitů, které se vešly do doby jedné periody vstupního signálu poté určíme dobu periody.
 \begin{schema}[h!]
@@ -215,7 +215,7 @@ Pro měření doby periody naopak použijeme zapojení podle schématu \ref{sche
 
 
 \section{Naměřené hodnoty}
-Naměřená data z měření frekvenčního generátoru jsou v tabulce~\ref{tab:frce} a~\ref{tab:perioda}.
+Naměřená data z měření frekvenčního generátoru jsou v~tabulce~\ref{tab:frce} a~\ref{tab:perioda}.
 
 \begin{table}[h!]
   \centering
@@ -244,7 +244,7 @@ Naměřená data z měření frekvenčního generátoru jsou v tabulce~\ref{tab:
   \caption{Naměřené hodnoty periody}
 \end{table}
 
-Data z měření hodin jsou v tabulce~\ref{tab:hodiny}.
+Data z měření hodin jsou v~tabulce~\ref{tab:hodiny}.
 
 \begin{table}
   \centering
@@ -287,7 +287,7 @@ Pro určení nejistoty měření doby periody způsobenou rozlišením budeme vy
   \label{eq:nejistota_perioda}
 \end{equation}
 
-Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme určit člen $u_k^2$ a budeme ho proto ignorovat. Nejistoty jsou dále v tabulce.
+Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme určit člen $u_k^2$ a~budeme ho proto ignorovat. Nejistoty jsou dále v~tabulce.
 
 \begin{table}[h!]
   \centering
@@ -302,7 +302,7 @@ Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme ur
   \caption{Nejistoty měření periody}
 \end{table}
 
-Pro zjištění přesnosti hodin použijeme rovnice \ref{eq:presnost_T} a \ref{eq:presnost_f}. Budeme vycházet z toho, že den má $24\cdot 60\cdot 60 = 86\,400~s$. 
+Pro zjištění přesnosti hodin použijeme rovnice \ref{eq:presnost_T} a~\ref{eq:presnost_f}. Budeme vycházet z toho, že den má $24\cdot 60\cdot 60 = 86\,400~s$. 
 
 \begin{equation}
   \left(\frac{T_m}{T}-1\right)\cdot 86\,400~s = \left(\frac{2,0000389}{2}-1\right)\cdot 86\,400~s = 1,68~\textrm{s/den}
@@ -314,7 +314,7 @@ Pro zjištění přesnosti hodin použijeme rovnice \ref{eq:presnost_T} a \ref{e
   \label{eq:presnost_f}
 \end{equation}
 
-Relativní chyba stupnice vůči měřené hodnotě je zobrazena v tabulce níže.
+Relativní chyba stupnice vůči měřené hodnotě je zobrazena v~tabulce níže.
 
 \begin{table}[h!]
   \centering
@@ -330,7 +330,7 @@ Relativní chyba stupnice vůči měřené hodnotě je zobrazena v tabulce níž
 \end{table}
 
 \section{Závěrečné vyhodnocení}
-Zjistili jsme nepřesnost hodin a jaký rozchod můžeme čekat za den. Také jsme ověřili, jak se při průměrování a při používání delšího časového okna pro počítání tiků může zvýšit přesnost resp. snížit nejistota měření. Dále jsme zjistili absolutní a relativní chybu stupnice generátoru funkcí. Zjistili jsme, že právě nastavení frekvence byl největší zdroj chyby.
+Zjistili jsme nepřesnost hodin a~jaký rozchod můžeme čekat za den. Také jsme ověřili, jak se při průměrování a~při používání delšího časového okna pro počítání tiků může zvýšit přesnost resp. snížit nejistota měření. Dále jsme zjistili absolutní a~relativní chybu stupnice generátoru funkcí. Zjistili jsme, že právě nastavení frekvence byl největší zdroj chyby.
 
 %--- LITERATURA a~ZDROJE (povinne) ---
 \clearpage
@@ -343,7 +343,7 @@ Zjistili jsme nepřesnost hodin a jaký rozchod můžeme čekat za den. Také js
 
 %----------------------------------------------------
 \subsection*{Seznam použitých internetových zdrojů}
-    \bibitem{navod} Návod k laboratorní úloze
+    \bibitem{navod} Návod k~laboratorní úloze
     
 \end{thebibliography}
 
