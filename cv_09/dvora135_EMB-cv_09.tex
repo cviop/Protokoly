@@ -190,8 +190,8 @@ V obou případech určete nepřesnost hodin v sekundách za den.
 \section{Seznam použitých přístrojů}
 \begin{table}
   \begin{tabular}{cc}
-    GENERÁTOR &- nízkofrekvenční generátor, typ ...\\
-    ČÍTAČ &- univerzální čítač, typ ...\\
+    GENERÁTOR &- nízkofrekvenční generátor, typ GOLDSTAR FG-8002\\
+    ČÍTAČ &- univerzální čítač, typ \textit{made by ČVUT}\\
     PŘÍPRAVEK &- přípravek s hodinami řízenými krystalem\\
   \end{tabular}
 \end{table}
@@ -284,7 +284,7 @@ Pro určení nejistoty měření doby periody způsobenou rozlišením budeme vy
 
 Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme určit člen $u_k^2$ a budeme ho proto ignorovat. Nejistoty jsou dále v tabulce.
 
-\begin{table}
+\begin{table}[h!]
   \centering
   \begin{tabular}{|c|c|c|c|}
     T, T= 1 \tmu s&60 Hz [\tmu s]&10 kHz [\tmu s]&100 kHz [\tmu s]\\\hline\hline
@@ -308,8 +308,20 @@ Pro zjištění přesnosti hodin použijeme rovnice \ref{eq:presnost_T} a \ref{e
   \label{eq:presnost_T}
 \end{equation}
 
-\section{Závěrečné vyhodnocení}
+Relativní chyba stupnice vůči měřené hodnotě je zobrazena v tabulce \ref{tab:chyba}.
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|c|c|}
+    ;60 Hz [Hz];10 kHz [Hz];100 kHz [Hz]\\\hline\hline
+    Naměřeno;67,9;10623,1;110837,3\\\hline
+    Relativní chyba;0,11634757;0,058655195;0,097776651\\\hline
+  \end{tabular}
+  \label{tab:chyba}
+  \caption{Relativní chyba stupnice na generátoru funkcí}
+\end{table}
 
+\section{Závěrečné vyhodnocení}
+Zjistili jsme nepřesnost hodin a jaký rozchod můžeme čekat za den
 
 %--- LITERATURA a~ZDROJE (povinne) ---
 \clearpage
