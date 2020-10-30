@@ -171,7 +171,7 @@
     \item Ověřte přesnost krystalem řízených hodin:
     \begin{enumerate}[label=\alph*)]
         \item měřením doby periody pulsů pro krokový motor (správná hodnota je 2~s),
-        \item přímým měřením frekvence oscilátoru (správná hodnota je 2\texp{15}, tj. 32\,768~Hz, resp. 2^{22} tj.~4\,194\,304~Hz).
+        \item přímým měřením frekvence oscilátoru (správná hodnota je 2\texp{15}, tj. 32\,768~Hz, resp. 2\texp{22} tj.~4\,194\,304~Hz).
     \end{enumerate}
 \end{enumerate}
 V obou případech určete nepřesnost hodin v sekundách za den.
@@ -289,8 +289,8 @@ Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme ur
   \begin{tabular}{|c|c|c|c|}
     T, T= 1 \tmu s&60 Hz [\tmu s]&10 kHz [\tmu s]&100 kHz [\tmu s]\\\hline\hline
     1&0,001743679&1,08234E-05&1,18884E-06\\\hline
-    10&0,001743823&1,22575E-05\\\hline&
-    100&&5,8739E-05\\\hline&
+    10&0,001743823&1,22575E-05&\\\hline
+    100&&5,8739E-05&\\\hline
     1000&&0,000577452&0,000577351\\\hline
   \end{tabular}
   \caption{Nejistoty měření periody}
