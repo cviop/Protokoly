@@ -188,8 +188,8 @@ V obou případech určete nepřesnost hodin v sekundách za den.
 \end{figure}
 
 \section{Seznam použitých přístrojů}
-\begin{table}
-  \begin{tabular}{cc}
+\begin{table}[h!]
+  \begin{tabular}{ll}
     GENERÁTOR &- nízkofrekvenční generátor, typ GOLDSTAR FG-8002\\
     ČÍTAČ &- univerzální čítač, typ \textit{made by ČVUT}\\
     PŘÍPRAVEK &- přípravek s hodinami řízenými krystalem\\
@@ -219,7 +219,8 @@ Naměřená data z měření frekvenčního generátoru jsou v tabulce~\ref{tab:
 
 \begin{table}[h!]
   \centering
-  \begin{tabular}{|c|c|c|c|}
+  \begin{tabular}{|r|r|r|r|}
+    \hline
       &60 Hz [Hz]&10 kHz [kHz]&100 kHz [kHz]\\\hline\hline
     0,1 s&70&10,63&110,83\\\hline
     1 s&68&10,622&110,828\\\hline
@@ -231,7 +232,8 @@ Naměřená data z měření frekvenčního generátoru jsou v tabulce~\ref{tab:
 
 \begin{table}[h!]
   \centering
-  \begin{tabular}{|c|c|c|c|}
+  \begin{tabular}{|r|r|r|r|}
+    \hline
     &60 Hz [\tmu s]&10 kHz [\tmu s]&100 kHz [\tmu s]\\\hline\hline
     1 T&15100,7&93,6&9\\\hline
     10 T &15101,87&93,64&-\\\hline
@@ -245,7 +247,9 @@ Naměřená data z měření frekvenčního generátoru jsou v tabulce~\ref{tab:
 Data z měření hodin jsou v tabulce~\ref{tab:hodiny}.
 
 \begin{table}
+  \centering
   \begin{tabular}{|c|c|}
+    \hline
     f [kHz]&T [\tmu s]\\\hline\hline
     32,7677&2000038,9\\\hline
   \end{tabular}
@@ -260,13 +264,14 @@ Data z měření hodin jsou v tabulce~\ref{tab:hodiny}.
 Pro určení nejistoty měření frekvence způsobenou rozlišením budeme vycházet ze vzorce \ref{eq:nejistota_frce}.
 
 \begin{equation}
-  u_{f_X} = \sqrt{\left(\delta'f_X/\sqrt{3}\right)^2+\left(\delta f_X/\sqrt{3}\right)^2}
+  u_{f_X} = \sqrt{\left(\Delta'f_X/\sqrt{3}\right)^2+\left(\Delta f_X/\sqrt{3}\right)^2}
   \label{eq:nejistota_frce}
 \end{equation}
 
 \begin{table}
   \centering
   \begin{tabular}{|c|c|c|c|}
+    \hline
     &60 Hz [Hz]&10 kHz [Hz]&100 kHz [Hz]\\\hline\hline
     0,1&5,773502692&5,773502822&5,773516875\\\hline
     1&0,577350269&0,577351572&0,577492082\\\hline
@@ -278,7 +283,7 @@ Pro určení nejistoty měření frekvence způsobenou rozlišením budeme vych�
 Pro určení nejistoty měření doby periody způsobenou rozlišením budeme vycházet ze vzorce \ref{eq:nejistota_perioda}.
 
 \begin{equation}
-  u_{T_X} = \sqrt{\left(\delta'T_X/\sqrt{3}\right)^2+\left(\delta T_X/\sqrt{3}\right)^2+2u_k^2}
+  u_{T_X} = \sqrt{\left(\Delta'T_X/\sqrt{3}\right)^2+\left(\Delta T_X/\sqrt{3}\right)^2+2u_k^2}
   \label{eq:nejistota_perioda}
 \end{equation}
 
@@ -287,6 +292,7 @@ Jelikož neznáme efektivní hodnotu šumu vstupního zesilovače, nemůžeme ur
 \begin{table}[h!]
   \centering
   \begin{tabular}{|c|c|c|c|}
+    \hline
     T, T= 1 \tmu s&60 Hz [\tmu s]&10 kHz [\tmu s]&100 kHz [\tmu s]\\\hline\hline
     1&0,001743679&1,08234E-05&1,18884E-06\\\hline
     10&0,001743823&1,22575E-05&\\\hline
@@ -304,25 +310,27 @@ Pro zjištění přesnosti hodin použijeme rovnice \ref{eq:presnost_T} a \ref{e
 \end{equation}
 
 \begin{equation}
-  \left(\frac{f_m}{f}-1\right)\cdot 86\,400~s = \left(\frac{32\,767,7}{32\,768}-1\right)\cdot 86\,400~s = -0,79~\textrm{s/den}
-  \label{eq:presnost_T}
+  \left(\frac{f_m}{f}-1\right)\cdot 86\,400~s = \left(\frac{32\,767,7}{32\,768}-1\right)\cdot 86\,400~s~=~-0,79~\textrm{s/den}
+  \label{eq:presnost_f}
 \end{equation}
 
-Relativní chyba stupnice vůči měřené hodnotě je zobrazena v tabulce \ref{tab:chyba}.
+Relativní chyba stupnice vůči měřené hodnotě je zobrazena v tabulce níže.
+
 \begin{table}[h!]
   \centering
   \begin{tabular}{|c|c|c|c|}
-    60 Hz [Hz]&10 kHz [Hz]&100 kHz [Hz]\\\hline\hline
+    \hline
+    &60 Hz [Hz]&10 kHz [Hz]&100 kHz [Hz]\\\hline\hline
     Naměřeno&67,9&10623,1&110837,3\\\hline
-    Absolutní chyba&7,9&623,1&10837,3\\\hline
-    Relativní chyba&0,11634757&0,058655195&0,097776651\\\hline
+    Absolutní chyba&7,9&623,1&10837,3\\\hline\hline
+    Relativní chyba&0,12&0,059&0,098\\\hline
   \end{tabular}
   \label{tab:chyba}
   \caption{Relativní chyba stupnice na generátoru funkcí}
 \end{table}
 
 \section{Závěrečné vyhodnocení}
-Zjistili jsme nepřesnost hodin a jaký rozchod můžeme čekat za den. Také jsme ověřili, jak se při průměrování a při používání delšího časového okna pro počítání tiků může zvýšit přesnost resp. snížit nejistota měření. Dále jsme zjistili absolutní a relativní chybu stupnice generátoru funkcí.
+Zjistili jsme nepřesnost hodin a jaký rozchod můžeme čekat za den. Také jsme ověřili, jak se při průměrování a při používání delšího časového okna pro počítání tiků může zvýšit přesnost resp. snížit nejistota měření. Dále jsme zjistili absolutní a relativní chybu stupnice generátoru funkcí. Zjistili jsme, že právě nastavení frekvence byl největší zdroj chyby.
 
 %--- LITERATURA a~ZDROJE (povinne) ---
 \clearpage
