@@ -78,9 +78,9 @@
 %_____________________________|___________________________|_____________________________%
 %                             
 
-\newcommand{\nazev}{}                                                        %
+\newcommand{\nazev}{Demonstrace principu vzorkování}                                                        %
 \newcommand{\jmeno}{Jakub Dvořák}                                                     %
-\newcommand{\datum}{2.11.2020}                                                              %
+\newcommand{\datum}{12.11.2020}                                                              %
 %---------------------------------------------------------------------------------------%
 
 
@@ -94,6 +94,7 @@
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tohm}{$\Omega$}
 \newcommand{\tmu}{$\mu$}
+\newcommand{\tmat}[1]{$#1$}
 
 
 %_______________________________________________________________________________________%
@@ -160,16 +161,25 @@
 \section{Úkol měření}
 \label{chap:ukol}
 \begin{enumerate}
-    \item 
-    \begin{enumerate}[label=\alph*)]
-        \item 
-    \end{enumerate}
+    \item Pomocí přípravku se vzorkovačem, jehož blokové schéma je nakresleno na \ref{fig:zapojeni}, zobrazte na osciloskopu ovzorkovaný průběh harmonického napětí z generátoru s frekvencí v rozmezí 200 až 1100~Hz a efektivní hodnotou 1 až 3~V.
+    \item V režimu "ruční vzorkování" sledujte na číslicovém voltmetru změnu hodnoty ovzorkovaného výstupního napětí $U_{výst}$ v závislosti na čase (chyba v režimu pamatování), stanovte velikost této změny za 10 s a přepočtěte ji na mV/ms.
+    \item S použitím časové lupy na osciloskopu zkontrolujte průběh napětí $U_{výst}$ na výstupu v časovém intervalu "upnutí" – viz. monografie Haasz, V., Sedláček, M.: \textit{Elektrická měření. Přístroje a metody}, kap. 4 - a určete přibližně upínací dobu.
+    \item V režimu přípravku "1 ze 16" změřte pomocí stejnosměrného číslicového voltmetru postupně všech 16 hodnot vzorků napětí, časový průběh signálu graficky rekonstruujte, vypočtěte efektivní hodnotu rekonstruovaného signálu a porovnejte výsledek s hodnotou změřenou střídavým číslicovým voltmetrem přímo na funkčním výstupu generátoru.
+    
 \end{enumerate}
-
+%pro subseznam ->
+%\item \begin{enumerate}[label=\alph*)]
+%  \item 
+%\end{enumerate}
 
 \section{Schéma zapojení}
 \label{chap:schema_zapojeni}
-
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.6\textwidth]{schema_zapojeni.png}
+  \caption{Zapojení přípravku pro demonstraci principu vzorkování}
+  \label{fig:zapojeni}
+\end{figure}
 
 
 \section{Seznam použitých přístrojů}
