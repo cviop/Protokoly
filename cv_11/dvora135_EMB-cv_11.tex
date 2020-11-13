@@ -169,17 +169,30 @@
 
 \section{Schéma zapojení}
 \label{chap:schema_zapojeni}
-
+\begin{figure}[h!]
+  \centering
+\end{figure}
 
 
 \section{Seznam použitých přístrojů}
 \label{chap:seznam_pristroju}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{ll}
+    G&Generátor funkcí Agilent 33220A, rozsah 20~MHz, rozlišení 14~bit, 20~MSa/s\\
+    P&Přípravek s nastavitelným kondenzátorem\\
+    SONDA&Profesionální sonda\\
 
+  \end{tabular}
+\end{table}
 
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
-
+Při přenosu signálu dochází k parazitním jevům. Na vstupu osciloskopu najdeme tedy nejen vstupní odpor o hodnotě 1~M\tohm , ale také kapacitu o hodnotě dané výrobcem, zpravidla 15~pF. Při zvyšování frekvence se nepřímo úměrně snižuje kapacitance vnitřního kondenzátoru a kondenzátoru je poté nižší napětí. Kompenzační kondenzátor v sondě je určen k tomu, aby se spolu s kapacitancí v~osciloskopu snižovala i kapacitance v sondě. Výsledný dělič napětí bude mít v~ideálním případě tedy stále stejný poměr. Pro výpočet hodnoty kapacity kompenzačního kondenzátoru v sondě můžeme použít následující vzorec:
+\begin{equation}
+  
+\end{equation}
 
 
 \section{Naměřené hodnoty}
