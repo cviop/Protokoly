@@ -162,10 +162,10 @@
 \section{Úkol měření}
 \label{chap:ukol}
 \begin{enumerate}
-    \item Pomocí přípravku se vzorkovačem, jehož blokové schéma je nakresleno na \ref{fig:zapojeni}, zobrazte na osciloskopu ovzorkovaný průběh harmonického napětí z generátoru s frekvencí v rozmezí 200 až 1100~Hz a efektivní hodnotou 1 až 3~V.
-    \item V režimu "ruční vzorkování" sledujte na číslicovém voltmetru změnu hodnoty ovzorkovaného výstupního napětí $U_{výst}$ v závislosti na čase (chyba v režimu pamatování), stanovte velikost této změny za 10 s a přepočtěte ji na mV/ms.
-    \item S použitím časové lupy na osciloskopu zkontrolujte průběh napětí $U_{výst}$ na výstupu v časovém intervalu "upnutí" – viz. monografie Haasz, V., Sedláček, M.: \textit{Elektrická měření. Přístroje a metody}, kap. 4 - a určete přibližně upínací dobu.
-    \item V režimu přípravku "1 ze 16" změřte pomocí stejnosměrného číslicového voltmetru postupně všech 16 hodnot vzorků napětí, časový průběh signálu graficky rekonstruujte, vypočtěte efektivní hodnotu rekonstruovaného signálu a porovnejte výsledek s hodnotou změřenou střídavým číslicovým voltmetrem přímo na funkčním výstupu generátoru.
+    \item Pomocí přípravku se vzorkovačem, jehož blokové schéma je nakresleno na obr. \ref{fig:zapojeni}, zobrazte na osciloskopu ovzorkovaný průběh harmonického napětí z generátoru s~frekvencí v~rozmezí 200 až 1100~Hz a~efektivní hodnotou 1 až 3~V.
+    \item V režimu "ruční vzorkování" sledujte na číslicovém voltmetru změnu hodnoty ovzorkovaného výstupního napětí $U_{výst}$ v~závislosti na čase (chyba v~režimu pamatování), stanovte velikost této změny za 10~s a~přepočtěte ji na mV/ms.
+    \item S použitím časové lupy na osciloskopu zkontrolujte průběh napětí $U_{výst}$ na výstupu v~časovém intervalu "upnutí" – viz. monografie Haasz, V., Sedláček, M.: \textit{Elektrická měření. Přístroje a~metody}, kap. 4 - a~určete přibližně upínací dobu.
+    \item V režimu přípravku "1 ze 16" změřte pomocí stejnosměrného číslicového voltmetru postupně všech 16 hodnot vzorků napětí, časový průběh signálu graficky rekonstruujte, vypočtěte efektivní hodnotu rekonstruovaného signálu a~porovnejte výsledek s hodnotou změřenou střídavým číslicovým voltmetrem přímo na funkčním výstupu generátoru.
     
 \end{enumerate}
 %pro subseznam ->
@@ -185,7 +185,7 @@
 
 \section{Seznam použitých přístrojů}
 \label{chap:seznam_pristroju}
-\begin{table}
+\begin{table}[h!]
   \begin{tabular}{ll}
         G & generátor funkcí Instek GFG-8020H\\
         ČV1 & číslicový multimetr GDM-8145, rozsah 2~V, přesnost \tpm (0,03 \% z údaje + 4 digity)\\
@@ -196,7 +196,7 @@
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
-Při měření harmonických průběhu pracujeme se spojitými jevy, jako ostatně všude v našem světě. Při měření digitálními přístroji nicméně potřebujeme získat diskrétní data a tedy spojitý signál rozkouskovat. K tomuto nám slouží vzorkovač. Ten v předem definovaných intervalech změří měřenou veličinu a její hodnotu poté po dobu intervalu sledování drží, abychom ji mohli odečíst. Při příliš malém vzorkování může docházet k chybnému měření. To je způsobeno změnou veličiny za dobu, kterou vzorkovač drží dříve změřenou hodnotu.
+Při měření harmonických průběhu pracujeme se spojitými jevy, jako ostatně všude v~našem světě. Při měření digitálními přístroji nicméně potřebujeme získat diskrétní data a~tedy spojitý signál rozkouskovat. K tomuto nám slouží vzorkovač. Ten v~předem definovaných intervalech změří měřenou veličinu a~její hodnotu poté po dobu intervalu sledování drží, abychom ji mohli odečíst. Při příliš malém vzorkování může docházet k chybnému měření. To je způsobeno změnou veličiny za dobu, kterou vzorkovač drží dříve změřenou hodnotu.
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
@@ -205,7 +205,7 @@ V tabulkách níže jsou zaznamenány z jednotlivých měření.
   \centering
   \begin{tabular}{|c|c|}
     \hline
-    f [Hz]&U [V]\\\hline\hline
+    $f$ [Hz]&$U_{ef}$ [V]\\\hline\hline
     500&1,5839\\\hline
   \end{tabular}
   \caption{Naměřené napětí}
@@ -236,7 +236,7 @@ V tabulkách níže jsou zaznamenány z jednotlivých měření.
   \centering
   \begin{tabular}{|l|c|}
     \hline
-    Vzorek n&Napětí [V] \\\hline\hline
+    Vzorek $n$&Napětí [V] \\\hline\hline
     1&1,704\\\hline
     2&0,925\\\hline
     3&0,058\\\hline
@@ -265,7 +265,7 @@ Podle tabulky \ref{tab:sledovane} je pokles napětí za 10~s roven 0,136~V. To o
 
 Velikost časového intervalu upnutí byl odečten z osciloskopu jako 2,5~\tmu s.
 
-Zrekonstruovaný graf naměřených napětí vzorků je zobrazen v grafu \ref{graf:vzorky}.
+Zrekonstruovaný graf naměřených napětí vzorků je zobrazen v~grafu \ref{graf:vzorky}.
 
 \begin{graf}
   \centering
@@ -285,7 +285,7 @@ Hodnota efektivního napětí $U_{ef}$ poté vyjde 1,43~V. Relativní chyba opro
 \label{chap:zaver}
 Zjistili jsme, že při použití vzorkování dochází hned k několika chybám měření. Pokud je doba pamatování příliš dlouhá, začne držené napětí klesat. To je způsobeno vybíjením nabitého kondenzátoru, který je nabit na hodnotu odpovídající zobrazenému napětí. Toto jde zvýšit větší kapacitou kondenzátoru, nebo kvalitnějším operačním zesilovačem.
 
-Další chyba vznesená do měření je způsobena držením hodnot, ačkoliv se měřená hodnota stále mění. Tato chyba ale není tak zásadní, jak by se na první pohled zdálo, jelikož plocha grafu, která v grafu přebývá držením hodnot napětí je stejná jako plocha grafu, která chybí.
+Další chyba vznesená do měření je způsobena držením hodnot, ačkoliv se měřená hodnota stále mění. Tato chyba ale není tak zásadní, jak by se na první pohled zdálo, jelikož plocha grafu, která v~grafu přebývá držením hodnot napětí je stejná jako plocha grafu, která chybí.
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
