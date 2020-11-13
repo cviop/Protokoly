@@ -94,7 +94,8 @@
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tohm}{$\Omega$}
 \newcommand{\tmu}{$\mu$}
-\newcommand{\tmat}[1]{$#1$}
+\newcommand{\tpm}{$\pm$}
+
 
 
 %_______________________________________________________________________________________%
@@ -184,26 +185,107 @@
 
 \section{Seznam použitých přístrojů}
 \label{chap:seznam_pristroju}
-
+\begin{table}
+  \begin{tabular}{ll}
+        G & generátor funkcí Instek GFG-8020H\\
+        ČV1 & číslicový multimetr GDM-8145, rozsah 2~V, přesnost \tpm (0,03 \% z údaje + 4 digity)\\
+        ČV2 & číslicový multimetr DM-441B, rozsah 2~V, přesnost \tpm (0,01 \% z údaje + 4 digity)\\
+        OSC & osciloskop Keysight DSOX2002A, 5~\tmu S/div\\
+  \end{tabular}
+\end{table}
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
-
-
+Při měření harmonických průběhu pracujeme se spojitými jevy, jako ostatně všude v našem světě. Při měření digitálními přístroji nicméně potřebujeme získat diskrétní data a tedy spojitý signál rozkouskovat. K tomuto nám slouží vzorkovač. Ten v předem definovaných intervalech změří měřenou veličinu a její hodnotu poté po dobu intervalu sledování drží, abychom ji mohli odečíst. Při příliš malém vzorkování může docházet k chybnému měření. To je způsobeno změnou veličiny za dobu, kterou vzorkovač drží dříve změřenou hodnotu.
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
+V tabulkách níže jsou zaznamenány z jednotlivých měření.
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    f [Hz]&U [V]\\\hline\hline
+    500&1,5839\\\hline
+  \end{tabular}
+  \caption{Naměřené napětí}
+  \label{tab:napeti}  
+\end{table}
+
+\begin{table}[h!]
+  \centering  
+  \begin{tabular}{|l|c|}
+    \hline
+    čas [s]&Napětí [V]\\\hline\hline
+    1&2,09  \\\hline
+    2&2,075 \\\hline
+    3&2,059 \\\hline
+    4&2,043 \\\hline
+    5&2,028 \\\hline
+    6&2,013 \\\hline
+    7&1,998 \\\hline
+    8&1,983 \\\hline
+    9&1,969 \\\hline
+    10&1,954 \\\hline
+  \end{tabular}
+  \caption{Závislost hodnoty sledovaného napětí na čase}
+  \label{tab:sledovane}  
+\end{table}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|c|}
+    \hline
+    Vzorek n&Napětí [V] \\\hline\hline
+    1&1,704\\\hline
+    2&0,925\\\hline
+    3&0,058\\\hline
+    4&-0,764\\\hline
+    5&-1,423\\\hline
+    6&-1,82\\\hline
+    7&-1,911\\\hline
+    8&-1,621\\\hline
+    9&-1,063\\\hline
+    10&-0,292\\\hline
+    11&0,572\\\hline
+    12&1,404\\\hline
+    13&2,07\\\hline
+    14&2,477\\\hline
+    15&2,571\\\hline
+  \end{tabular}
+  \caption{Hodnota napětí jednotlivých vzorků}
+  \label{tab:vzorky}  
+\end{table}
 
 
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
+Podle tabulky \ref{tab:sledovane} je pokles napětí za 10~s roven 0,136~V. To odpovídá hodnotě 0,0136~V/s resp. 0,0136~mV/ms.
 
+Velikost časového intervalu upnutí byl odečten z osciloskopu jako 2,5~\tmu s.
+
+Zrekonstruovaný graf naměřených napětí vzorků je zobrazen v grafu \ref{graf:vzorky}.
+
+\begin{graf}
+  \centering
+  \includegraphics[width=.8\textwidth]{graf_vzorky.pdf}
+  \caption{Velikosti napětí jednotlivých vzorků, data z tabulky \ref{tab:vzorky}}
+  \label{graf:vzorky}
+\end{graf}.
+
+Pro výpočet efektivní hodnoty u průběhu napětí, tvořeného obdélníkovými průběhy nám stačí spočítat plochu pod grafem. K tomu využijeme následující vrozec.
+\begin{equation}
+  U_{ef} = \sum_{n=0}^{15} \frac{|\,U_n\,|}{16}
+\end{equation}
+Hodnota efektivního napětí $U_{ef}$ poté vyjde 1,43~V. Relativní chyba oproti hodnotě naměřené číslicovým multimetrem je 0,09 resp. 9~\%.
 
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
+Zjistili jsme, že při použití vzorkování dochází hned k několika chybám měření. Pokud je doba pamatování příliš dlouhá, začne držené napětí klesat. To je způsobeno vybíjením nabitého kondenzátoru, který je nabit na hodnotu odpovídající zobrazenému napětí. Toto jde zvýšit větší kapacitou kondenzátoru, nebo kvalitnějším operačním zesilovačem.
 
+Další chyba vznesená do měření je způsobena držením hodnot, ačkoliv se měřená hodnota stále mění. Tato chyba ale není tak zásadní, jak by se na první pohled zdálo, jelikož plocha grafu, která v grafu přebývá držením hodnot napětí je stejná jako plocha grafu, která chybí.
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
