@@ -1,23 +1,8 @@
-Podkompezovaná&
-"sestupná hrana "&"15 ns"
-"vzestupná hrana"&"15,3 ns"
-&
-překmit&-
-&
-&
-"Překompenzovaná sonda"&
-"sestupná hrana "&"9 ns"
-"vzestupná hrana"&"9 ns"
-&
-překmit&"575 mV"
-&
-&
-"Kompenzovaná sonda"&
-"sestupná hrana "&"15 ns"
-"vzestupná hrana"&"15,3 ns"
-&
-překmit&"35 mV"
-&
-&
-&
-BURST&
+Podkompezovaná&Překompenzovaná sonda&Kompenzovaná sonda
+sestupná hrana &15 ns&9 ns&15 ns
+vzestupná hrana&15,3 ns&9 ns&15,3 ns
+překmit&-&575 mV&35 mV
+&&&
+&&&
+BURST&&&
+překmit&587 mV&&

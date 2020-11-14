@@ -162,7 +162,11 @@
 \begin{enumerate}
     \item 
     \begin{enumerate}[label=\alph*)]
-        \item 
+        \item Seznamte se s blokovým schématem číslicového osciloskopu na obr. \ref{fig:blok_osc} a funkčního generátoru na obr. \ref{fig:blok_generator}.
+        \item  Odvoďte vztah pro dosažení frekvenčně nezávislého přenosu obvodu pasivní frekvenčně kompenzované sondy 10:1 dle \ref{fig:schema}.
+        \item Pomocí generátoru programovatelného průběhu (1 kHz, 1 V , obdélník) proveďte kompenzaci modelu sondy 10 : 1, která je připojena ke vstupu osciloskopu CH1. Pro obě mezní polohy proměnného kondenzátoru („překompenzovaná“/„podkompenzovaná“ sonda) zakreslete pozorovaný průběh do sešitu a zjistěte jeho parametry (amplitudu, frekvenci, délku náběžné a sestupné hrany, příp. překmitnutí). Pro odečítání hodnot těchto parametrů využijte kurzory.
+        Na druhém kanálu osciloskopu (vstup CH2) pozorujte a do sešitu zakreslete průběh téhož signálu snímaný profesionální sondou obdobných parametrů. Tuto sondu nekompenzujte.
+        \item Přepněte generátor do režimu„Burst“. Změřte velikost překmitnutí signálu v případě „překompenzované“ sondy. Pro optimální zobrazení průběhu využijte spouštění sestupnou hranou a~vysvětlete režim osciloskopu „pre-trigger“, ve kterém v tomto případě přístroj pracuje.
     \end{enumerate}
 \end{enumerate}
 
@@ -171,6 +175,24 @@
 \label{chap:schema_zapojeni}
 \begin{figure}[h!]
   \centering
+  \includegraphics[width = 0.8\textwidth]{schema_zapojeni.png}
+  \caption{Schéma zapojení}
+  \label{fig:schema}
+\end{figure}
+
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{blokove_schema_osciloskop.png}
+  \caption{Blokové schéma číslicového osciloskopu}
+  \label{fig:blok_osc}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{blokove_schema_generator.png}
+  \caption{Blokové schéma generátoru programovatelného průběhu}
+  \label{fig:blok_generator}
 \end{figure}
 
 
@@ -191,23 +213,86 @@
 \label{chap:teoreticky_uvod}
 Při přenosu signálu dochází k parazitním jevům. Na vstupu osciloskopu najdeme tedy nejen vstupní odpor o hodnotě 1~M\tohm , ale také kapacitu o hodnotě dané výrobcem, zpravidla 15~pF. Při zvyšování frekvence se nepřímo úměrně snižuje kapacitance vnitřního kondenzátoru a kondenzátoru je poté nižší napětí. Kompenzační kondenzátor v sondě je určen k tomu, aby se spolu s kapacitancí v~osciloskopu snižovala i kapacitance v sondě. Výsledný dělič napětí bude mít v~ideálním případě tedy stále stejný poměr. Pro výpočet hodnoty kapacity kompenzačního kondenzátoru v sondě můžeme použít následující vzorec:
 \begin{equation}
-  \frac{R_p}{R_0} = \frac{C_0}{C_p} \leftarrow C_p=\frac{R_O}{R_p}\cdotC_0 = 1,2~pF.
+  \frac{R_p}{R_0} = \frac{C_0}{C_p} \leftarrow C_p=\frac{R_O}{R_p}\cdot C_0 = 1,2~pF.
+  \label{eq:komp_final}
 \end{equation}
 
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
-Naměřené hodnoty jsou zapsány v tabulkách níže.
+Naměřené hodnoty jsou zapsány v tabulce \ref{tab:hodnoty}.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|c||c||c|}
+    \hline
+    &Podkompezovaná&Překompenzovaná &Kompenzovaná\\\hline
+    Sestupná hrana &15 ns&9 ns&15 ns\\\hline
+    Vzestupná hrana&15,3 ns&9 ns&15,3 ns\\\hline
+    Překmit&-&575 mV&35 mV\\\hline
+  \end{tabular}
+  \caption{Naměřené hodnoty}
+  \label{tab:hotnoty}
+\end{table}
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|}
+    \hline
+    \multicolumn{2}{c}{BURST}\\\hline
+    překmit&587 mV\\\hline
+  \end{tabular}
+\end{table}
+
+Níže jsou obrázky obrazovky při měření jednotlivých stavů.
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{overcomp.png}
+  \caption{Překompenzovaná sonda}
+  \label{fig:overcomp}  
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{undercomp.png}
+  \caption{Podkompezovaná sonda}
+  \label{fig:undercomp}  
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.8\textwidth]{burst.png}
+  \caption{Režim Burst}
+  \label{fig:burst}  
+\end{figure}
 
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
+Pro výpočet vztahu ze vzorce \ref{eq:komp_final} použijeme následující způsob.
 
+\begin{equation}
+  \begin{split}
+    \hat{Z_p} &= R_p || \frac{1}{j\omega C_p} ú \frac{\frac{R_p}{j\omega C_p}}{R_p+\frac{1}{j \omega C_p}}\\
+    \hat{Z_0} &= R_0 || \frac{1}{j\omega C_0} = \frac{\frac{R_0}{j\omega C_0}}{R_0\frac{1}{j\omega C_O}} = \frac{R_0}{R_0 j\omega C_0 +1}\\
+    \frac{\hat{U_2}}{\hat{U_1}} &= \frac{\hat{Z_P}}{\hat{Z_P} + \hat{Z_0}}\\
+    \hat{Z_1} &= \frac{R_1}{R_1 j\omega C_1 +1}\\
+    \hat{Z_2} &= \frac{R_2}{R_2 j\omega C_2 +1}\\
+    \frac{U_2}{U_1} &= \frac{\hat{Z_2}}{\hat{Z_1} + \hat{Z_2}} = \frac{\frac{R_2}{R_2 j\omega C_2 +1}}{\frac{R_2}{R_2 j\omega C_2 +1} + \frac{R_1}{R_1 j\omega C_1 +1}}\\
+  \end{split}
+\end{equation}
+\begin{equation}
+  \begin{split}
+    R_2\omega j C_2 &= R_1 \omega j C_1\\
+    \frac{R_2}{R_1} &= \frac{C_1}{C_2}\\
+  \end{split}
+\end{equation}
 
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
-
+Zjistili jsme, že při kompenzaci vstupní kapacity osciloskopu může dojít ke dvěma nechtěným stavům. A to k podkompenzaci a překompenzaci. Při podkompenzaci má sonda kapacitní charakter a dochází k integraci signálu, jak je zachyceno na obr. \ref{fig:under} . Při překompenzaci má sonda induktivní charakter, což je vidět na obrázku \ref{fig:over}. Při módu Burst vysílá generátor funkcí $n$ pulzů a při zvolení režimu \textit{pretrigger} můžeme zachytit nejen změnu náběžné hrany, ale také část signálu. To díky tzv. \textit{kruhovému bufferu}, který ukládá průběh signálu. 
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
