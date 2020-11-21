@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt]{article}   % papír A4, písmo 12 bodu
-\usepackage[utf8]{inputenc}             %kodovaní UTF-8
+\usepackage[utf8x]{inputenc}             %kodovaní UTF-8
 \usepackage{ucs}                        %kodovani unicode
 \usepackage[czech]{babel}               %podpora cestiny
 \usepackage[T1]{fontenc}                %pouzij variantu pisma T1 (hacky, carky)
@@ -78,9 +78,9 @@
 %_____________________________|___________________________|_____________________________%
 %                             
 
-\newcommand{\nazev}{}                                                        %
+\newcommand{\nazev}{Měření odporů}                                                        %
 \newcommand{\jmeno}{Jakub Dvořák}                                                     %
-\newcommand{\datum}{2.11.2020}                                                              %
+\newcommand{\datum}{20.11.2020}                                                              %
 %---------------------------------------------------------------------------------------%
 
 
@@ -94,6 +94,8 @@
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tohm}{$\Omega$}
 \newcommand{\tmu}{$\mu$}
+\newcommand{\var}[2]{$#1_\text{#2}$}
+\renewcommand{\t}[1]{\text{#1}}
 
 
 %_______________________________________________________________________________________%
@@ -162,14 +164,38 @@
 \begin{enumerate}
     \item 
     \begin{enumerate}[label=\alph*)]
-        \item 
+        \item Měření malých odporů Ohmovou metodou. Sestavte měřicí obvod dle obr. 1. Vhodnou metodikou měření vylučte vliv termoelektrických napětí. Z naměřených hodnot napětí a~proudu vypočtěte velikost neznámého odporu \var{R}{X} a stanovte rozšířenou nejistotu měření (pro \var{k}{R}~=~2).
+        \item Měření malých odporů sériovou srovnávací metodou. Zapojte měřicí obvod dle obr. 2. Změřte napětí na etalonu \var{R}{N} a napětí na měřeném odporu \var{R}{X}. Vhodnou metodikou měření vylučte vliv termoelektrických napětí. Vypočtěte velikost neznámého odporu \var{R}{X} a odvoďte vztah pro nejistotu měření.
+        \item Měření středních odporů převodníkem R \var{\rightarrow} U. Sestavte převodník odpor-napětí s OZ (\var{U}{R}~=~10 V, \var{R}{N1}~=~10 k\tohm ) dle obr. 3. Odvoďte přenos převodníku a ověřte jeho funkci. Jako odpor \var{R}{X} použijte odporovou dekádu. Zdůvodněte, do jaké hodnoty odporu může uvedený převodník měřit.
     \end{enumerate}
 \end{enumerate}
 
 
 \section{Schéma zapojení}
 \label{chap:schema_zapojeni}
+\begin{figure}[h!]
+  \centering
+  \begin{minipage}{.4\textwidth}
+    \centering
+    \captionsetup{width=0.8\textwidth}
+    \includegraphics[width=\textwidth]{ohm.png}
+    \caption{Měření malého odporu Ohmovou metodou}
+    \label{fig:ohm}
+  \end{minipage}
+  \begin{minipage}{.4\textwidth}
+    \centering
+    \captionsetup{width=0.8\textwidth}
+    \includegraphics[width=\textwidth]{ser.png}
+    \caption{Měření malého odporu sériovou metodou}
+    \label{fig:ser}
+  \end{minipage}
+\end{figure}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=.4\textwidth]{ru.png}
+  \caption{Převodník R $\rightarrow$ U}
+\end{figure}
 
 
 \section{Seznam použitých přístrojů}

@@ -32,6 +32,7 @@
 \usepackage[unicode]{hyperref}          %klikaci odkazy v~textu
 \usepackage{mhchem}
 \usepackage{multirow}
+\usepackage{textgreek}
 
 \usepackage{halloweenmath}
 
@@ -78,9 +79,9 @@
 %_____________________________|___________________________|_____________________________%
 %                             
 
-\newcommand{\nazev}{}                                                        %
+\newcommand{\nazev}{Nevyvážený Wheatstoneův můstek - vyhodnocení změny odporu odporového snímače}                                                        %
 \newcommand{\jmeno}{Jakub Dvořák}                                                     %
-\newcommand{\datum}{2.11.2020}                                                              %
+\newcommand{\datum}{21.11.2020}                                                              %
 %---------------------------------------------------------------------------------------%
 
 
@@ -94,6 +95,7 @@
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tohm}{$\Omega$}
 \newcommand{\tmu}{$\mu$}
+\newcommand{\var}[2]{$#1_\text{#2}$}
 
 
 %_______________________________________________________________________________________%
@@ -162,8 +164,21 @@
 \begin{enumerate}
     \item 
     \begin{enumerate}[label=\alph*)]
-        \item 
+        \item  Zapojte převodník R → U s operačním zesilovačem podle schématu na obr. 1 (\var{U}{r} = 10 V, \var{R}{N1} = 10 k\tohm) a změřte závislost fp odporu snímače na jeho úhlové výchylce \var{\alpha} v rozsahu \var{\alpha}{} = 0 až 180° po 15° (klidové poloze snímače \var{\alpha} = 90° odpovídá hodnota odporu \var{R}{0}, tj. \var{\Delta}{}\var{R}{}~=~0).
+    \item Odporový snímač zapojte do Wheatstoneova můstku napájeného ze zdroje napětí \var{U}{AC} = 5~V (obr. 2). Můstek vyvažte odporovou dekádou \var{R}{D} pro hodnotu \var{\alpha}{} = 90° a změřte závislost \var{f}{MN} výstupního napětí \var{U}{BD} na změně úhlu \textalpha, tj. na změně odporu ∆R (pro stejné hodnoty \textalpha\ jako v bodě 1). Odvoďte teoretický vztah pro toto napětí, tj.
     \end{enumerate}
+    \begin{equation}
+      U_{BD} = f_{MN}(\Delta R)=\frac{U_{AC}}{4}\frac{\frac{\Delta R}{R_0}}{1+\frac{\Delta R}{2R_0}}
+    \end{equation}
+    \item Odporový snímač zapojte do Wheatstoneova můstku napájeného ze zdroje proudu \var{I}{} = 2,5 mA. Zdroj proudu realizujte pomocí operačního zesilovače (obr. 3). Můstek opět vyvažte odporovou dekádou \var{R}{D} pro hodnotu \textalpha\ = 90° a změřte závislost fMP výstupního napětí \var{U}{BD} na změně úhlu \textalpha, tj. na změně odporu \var{\Delta}{} R (pro stejné hodnoty \textalpha\ jako v bodě 1). Odvoďte teoretický vztah pro toto napětí, tj.
+    \begin{equation}
+      U_{BD} = f_{MN}(\Delta R)=\frac{I}{4}\frac{\Delta R}{1+\frac{\Delta R}{4R_0}}
+    \end{equation}
+    \item Podle schématu na obr. 4 zapojte tzv. „linearizovaný můstek" (velikost napájecího napětí volte \var{U}{Z} = 2,5 V). Můstek vyvažte odporovou dekádou RD pro hodnotu \textalpha\ = 90° a změřte závislost \var{U}{2} = \var{f}{LM} výstupního napětí \var{U}{2} na změně úhlu \textalpha, tj. na změně odporu \var{\Delta}{}R (pro stejné hodnoty úhlu \textalpha jako v předešlých bodech). Odvoďte teoretický vztah pro toto napětí, tj.
+    \begin{equation}
+      U_2 = f_{LM}(\Delta R) = -\frac{\Delta R}{2R_0}U_Z
+    \end{equation}
+    \item Do společného grafu vyneste odchylky hodnot naměřených dle bodů 2, 3 a 4 od lineárního průběhu. Směrnici přímky, od které budete určovat odchylky od linearity, stanovte z koncových bodů naměřené závislosti \var{f}{LM}\var{(\Delta R)}{} (tedy pro \textalpha\ = 0 a \textalpha\ = 180°). Pokud se absolutní hodnoty napětí v koncových bodech liší, nahraďte je aritmetickým průměrem těchto absolutních hodnot (spojnice \var{U'}{2} = \var{f'}{LM}(\var{\Delta}{}R) takto upravených koncových bodů prochází počátkem souřadnic [\var{\Delta}{}R, \var{U}{2}]). Odchylky závislostí \var{f}{MN}(\var{\Delta}{}R), \var{f}{MP}(\var{\Delta}{}R) a \var{f}{LM}(\var{\Delta}{}R) od linearity určete jako odchylky těchto závislostí od přímky \var{U'}{2} = \var{f'}{LM}(\var{\Delta}{}R). To lze udělat proto, že pro měření dle bodů 2, 3 a 4 jsou v zadáních zvoleny hodnoty napájecích napětí (resp. proudu) tak, aby směrnice všech závislostí v počátku byly zhruba stejné.
 \end{enumerate}
 
 
