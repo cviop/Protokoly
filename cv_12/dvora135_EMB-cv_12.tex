@@ -299,11 +299,17 @@ Výsledná nejistota s koeficientem rozšíření poté bude
   U_{\t{R}_\t{X}}=k_r\cdot \frac{7,8\cdot 10^{-5}}{\sqrt{2}} = 1,1\cdot 10^{-4}~\Omega
 \end{equation}
 
-
+Pro odvození vztahu pro výpočet nejistoty v případě sériové srovnávací metody zvolíme následující postup.
+\begin{equation}
+  u_{\t{R}_{\t{X}_\t{1}}} = \sqrt{\left(\frac{\partial R_\t{X}}{\partial R_{\t{N}_\t{1}}}\cdot u_{\t{R}_\t{N}}\right)^2 + \left(\frac{\partial R_\t{X}}{\partial U_{\t{R}_{\t{X}_\t{1}}}}\cdot u_{\t{U}_{\t{R}_{\t{X}_\t{1,2}}}}\right)^2 + \left(\frac{\partial R_\t{X}}{\partial U_{\t{R}_{\t{X}_\t{1}}}}\cdot u_{\t{U}_{\t{R}_{\t{N}_\t{1,2}}}}\right)^2} = 
+\end{equation}
+\begin{equation*}
+  =\sqrt{\left(\frac{U_{\t{R}_{\t{X}_\t{1}}}}{U_{\t{R}_{\t{N}_\t{1}}}}\cdot u_{\t{R}_\t{N}} \right)^2 + \left(\frac{R_\t{N}}{U_{\t{R}_{\t{N}_\t{1}}}\cdot u_{\t{U}_{\t{R}_{\t{X}_\t{1,2}}}}}\right)^2 + \left(-\frac{U_{\t{R}_{\t{X}_\t{1}}}\cdot R_\t{N}}{U^2_{\t{R}_{\t{N}_\t{1}}}} \cdot u_{\t{U}_{\t{R}_{\t{N}_\t{1,2}}}}\right)^2}
+\end{equation*}
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
-
+Výsledek měření Ohmovou metodou je (11,50$\,\pm\,$ 0,11)~m\tohm . Hodnota pro sériovou srovnávací metodu vyšla $\rx=11,475$ m\tohm . Z měření jsme ověřili, že při měření malých odporů se uplatňuje vliv termoelektrických napětí a proto je nutné měřit hodnoty elektrického odporu v obou směrech proudu a následně udělat aritmetický průměr.
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
