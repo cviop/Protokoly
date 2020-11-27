@@ -96,6 +96,20 @@
 \newcommand{\tmu}{$\mu$}
 \newcommand{\var}[2]{$#1_\text{#2}$}
 \renewcommand{\t}[1]{\text{#1}}
+\newcommand{\sub}[1]{_{\text{#1}}}
+\newcommand{\rxi}{R\sub{X\tsub{1}}}
+\newcommand{\rxii}{R\sub{X\tsub{2}}}
+\newcommand{\rx}{R\sub{X}}
+\newcommand{\rn}{R\sub{N}}
+\newcommand{\ui}{U\sub{1}}
+\newcommand{\uii}{U\sub{2}}
+\newcommand{\ii}{I\sub{1}}
+\newcommand{\iii}{I\sub{2}}
+\newcommand{\uijd}{U\sub{I\tsub{1,2}}}
+\newcommand{\urx}{U\sub{R\tsub{X}}}
+\newcommand{\urn}{U\sub{R\tsub{N}}}
+
+
 
 
 %_______________________________________________________________________________________%
@@ -166,7 +180,7 @@
     \begin{enumerate}[label=\alph*)]
         \item Měření malých odporů Ohmovou metodou. Sestavte měřicí obvod dle obr. 1. Vhodnou metodikou měření vylučte vliv termoelektrických napětí. Z naměřených hodnot napětí a~proudu vypočtěte velikost neznámého odporu \var{R}{X} a stanovte rozšířenou nejistotu měření (pro \var{k}{R}~=~2).
         \item Měření malých odporů sériovou srovnávací metodou. Zapojte měřicí obvod dle obr. 2. Změřte napětí na etalonu \var{R}{N} a napětí na měřeném odporu \var{R}{X}. Vhodnou metodikou měření vylučte vliv termoelektrických napětí. Vypočtěte velikost neznámého odporu \var{R}{X} a odvoďte vztah pro nejistotu měření.
-        \item Měření středních odporů převodníkem R \var{\rightarrow} U. Sestavte převodník odpor-napětí s OZ (\var{U}{R}~=~10 V, \var{R}{N1}~=~10 k\tohm ) dle obr. 3. Odvoďte přenos převodníku a ověřte jeho funkci. Jako odpor \var{R}{X} použijte odporovou dekádu. Zdůvodněte, do jaké hodnoty odporu může uvedený převodník měřit.
+        \item Měření středních odporů převodníkem R \var{\rightarrow}{} U. Sestavte převodník odpor-napětí s OZ (\var{U}{R}~=~10 V, \var{R}{N1}~=~10 k\tohm ) dle obr. 3. Odvoďte přenos převodníku a ověřte jeho funkci. Jako odpor \var{R}{X} použijte odporovou dekádu. Zdůvodněte, do jaké hodnoty odporu může uvedený převodník měřit.
     \end{enumerate}
 \end{enumerate}
 
@@ -202,23 +216,64 @@
 \label{chap:seznam_pristroju}
 \begin{enumerate}
   \item Laboratorní zdroj Agilent
-  \item Digitální voltmetr HP
+  \item Digitální voltmetr HP 34401A
 \end{enumerate}
+
+
 
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
-
+Při měření malých odporů se uplatňuje i přechodový odpor mezi zdrojem proudu a měřeným odporem. Pro eliminaci tohoto jevu se používá tzv. \textit{čtyřsvorková} metoda. Pro vyloučení jevu termoelektrických jevů, jejich velikost je závislá na směru proudu, měříme oba směry. Následně výsledný odpor vypočítáme jako aritmetický průměr naměřených hodnot. $\rx=\frac{\left(\rxi+\rxii\right)}{2}$. Pro měření ohmovou metodou použijeme vzorec $\rx=\frac{U}{I}$ a pro měření srovnávací metodou využijeme vzorec $\rx = \frac{\urx}{\urn}\cdot\rn$.
 
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
-
-
+Naměřené hodnoty jsou níže v tabulkách:
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|r|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{Ohmova metoda}\\\hline\hline
+    $I$ (A)	&	$U$ (V)	&	$R$ (m\tohm)	\\\hline
+    1	      &	11,3	  &	11,3	    \\\hline
+    -1	    &	11,7	  &	11,7	    \\\hline\hline
+    \multicolumn{3}{|c|}{$\rx=11,5$ m\tohm}\\\hline
+  \end{tabular}
+  \caption{Odpor vypočtený Ohmovou metodou}
+  \label{tab:ohm}
+\end{table}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|r|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{Sériová srovnávací metoda}\\\hline\hline
+    $U\sub{R\tsub{N}}$ (V)	&	$U\sub{R\tsub{X}}$ (V)	&	$R_\text{X}$ (m\tohm)	\\\hline
+    0,876   &	10,082	  &	11,509	    \\\hline
+    0,896   &	10,251	  &	11,441	    \\\hline\hline
+    \multicolumn{3}{|c|}{$\rx=11,475$ m\tohm}\\\hline
+  \end{tabular}
+  \caption{Odpor vypočtený srovnávací metodou}
+  \label{tab:srov}
+\end{table}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|r|c|c|}
+    \hline
+    \multicolumn{3}{|c|}{Měření převodníkem U \var{\rightarrow}{} I}\\\hline\hline
+    $U\sub{out}$ (V)	&	$U\sub{in}$ (V)	&	$R_\text{X}$ (k\tohm)	\\\hline
+    5   &	-5,99	  &	11,980	    \\\hline\hline
+    \multicolumn{3}{|c|}{$\rx=11,980$ k\tohm}\\\hline
+  \end{tabular}
+  \caption{Odpor změřený převodníkem U \var{\rightarrow}{} I}
+  \label{tab:prevod}
+\end{table}
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
-
+\begin{equation}
+  u_\text{I$_\text{1,2}$}=\frac{TP\cdot M}{100\sqrt{3}}=\frac{0,2\cdot 3}{100\sqrt{3}} = 3,46~\text{mA}
+\end{equation}
 
 
 \section{Závěrečné vyhodnocení}
