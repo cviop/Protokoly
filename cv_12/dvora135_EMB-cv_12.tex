@@ -215,7 +215,7 @@
 \section{Seznam použitých přístrojů}
 \label{chap:seznam_pristroju}
 \begin{enumerate}
-  \item Laboratorní zdroj Agilent
+  \item Laboratorní zdroj Agilent Proud < 0,2 \% z hodnoty + 10 mA
   \item Digitální voltmetr HP 34401A \var{\pm}{} 0,0050 \% údaje \var{\pm}{} 0,0035 \% rozsahu
 \end{enumerate}
 
@@ -230,50 +230,75 @@ Při měření malých odporů se uplatňuje i přechodový odpor mezi zdrojem p
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
 Naměřené hodnoty jsou níže v tabulkách:
+
+
 \begin{table}[h!]
   \centering
-  \begin{tabular}{|r|c|c|}
-    \hline
-    \multicolumn{3}{|c|}{Ohmova metoda}\\\hline\hline
-    $I$ (A)	&	$U$ (V)	&	$R$ (m\tohm)	\\\hline
-    1	      &	11,3	  &	11,3	    \\\hline
-    -1	    &	11,7	  &	11,7	    \\\hline\hline
-    \multicolumn{3}{|c|}{$\rx=11,5$ m\tohm}\\\hline
-  \end{tabular}
+  \begin{subtable}[t]{.4\textwidth}
+    \centering
+    \begin{tabular}{|r|c|c|}
+      \hline
+      \multicolumn{3}{|c|}{Sériová srovnávací metoda}\\\hline\hline
+      $U\sub{R\tsub{N}}$ (V)	&	$U\sub{R\tsub{X}}$ (V)	&	$R_\text{X}$ (m\tohm)	\\\hline
+      0,876   &	10,082	  &	11,509	    \\\hline
+      0,896   &	10,251	  &	11,441	    \\\hline\hline
+      \multicolumn{3}{|c|}{$\rx=11,475$ m\tohm}\\\hline
+    \end{tabular}
+    \caption{Odpor vypočtený srovnávací metodou}
+    \label{tab:srov}
+  \end{subtable}
+  \begin{subtable}[t]{.4\textwidth}
+    \centering
+    \begin{tabular}{|r|c|c|}
+      \hline
+      \multicolumn{3}{|c|}{Ohmova metoda}\\\hline\hline
+      $I$ (A)	&	$U$ (V)	&	$R$ (m\tohm)	\\\hline
+      1	      &	11,3	  &	11,3	    \\\hline
+      -1	    &	11,7	  &	11,7	    \\\hline\hline
+      \multicolumn{3}{|c|}{$\rx=11,5$ m\tohm}\\\hline
+    \end{tabular}
   \caption{Odpor vypočtený Ohmovou metodou}
   \label{tab:ohm}
-\end{table}
-\begin{table}[h!]
-  \centering
-  \begin{tabular}{|r|c|c|}
-    \hline
-    \multicolumn{3}{|c|}{Sériová srovnávací metoda}\\\hline\hline
-    $U\sub{R\tsub{N}}$ (V)	&	$U\sub{R\tsub{X}}$ (V)	&	$R_\text{X}$ (m\tohm)	\\\hline
-    0,876   &	10,082	  &	11,509	    \\\hline
-    0,896   &	10,251	  &	11,441	    \\\hline\hline
-    \multicolumn{3}{|c|}{$\rx=11,475$ m\tohm}\\\hline
-  \end{tabular}
-  \caption{Odpor vypočtený srovnávací metodou}
-  \label{tab:srov}
-\end{table}
-\begin{table}[h!]
-  \centering
-  \begin{tabular}{|r|c|c|}
-    \hline
-    \multicolumn{3}{|c|}{Měření převodníkem U \var{\rightarrow}{} I}\\\hline\hline
-    $U\sub{out}$ (V)	&	$U\sub{in}$ (V)	&	$R_\text{X}$ (k\tohm)	\\\hline
-    5   &	-5,99	  &	11,980	    \\\hline\hline
-    \multicolumn{3}{|c|}{$\rx=11,980$ k\tohm}\\\hline
-  \end{tabular}
-  \caption{Odpor změřený převodníkem U \var{\rightarrow}{} I}
-  \label{tab:prevod}
+  \end{subtable}
+  \begin{subtable}[]{\textwidth}
+    \begin{tabular}{c}
+      \\
+    \end{tabular}
+  \end{subtable}
+  \begin{subtable}[]{.4\textwidth}
+    \centering
+    \begin{tabular}{|r|c|c|}
+      \hline
+      \multicolumn{3}{|c|}{Měření převodníkem U \var{\rightarrow}{} I}\\\hline\hline
+      $U\sub{out}$ (V)	&	$U\sub{in}$ (V)	&	$R_\text{X}$ (k\tohm)	\\\hline
+      5   &	-5,99	  &	11,980	    \\\hline\hline
+      \multicolumn{3}{|c|}{$\rx=11,980$ k\tohm}\\\hline
+    \end{tabular}
+    \caption{Odpor změřený převodníkem U \var{\rightarrow}{} I}
+    \label{tab:prevod}
+  \end{subtable}
 \end{table}
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
 \begin{equation}
-  u_\text{I$_\text{1,2}$}=\frac{TP\cdot M}{100\sqrt{3}}=\frac{0,2\cdot 3}{100\sqrt{3}} = 3,46~\text{mA}
+  u_\text{U$_\text{1,2}$}=\frac{\frac{\delta_1}{100}\cdot X+\frac{\delta_2}{100}\cdot M}{\sqrt{3}} = \frac{\frac{0,005}{100}\cdot 10,082+\frac{0,0035}{100}\cdot 100}{\sqrt{3}} = 2,3~\mu\text{V}
 \end{equation}
+\begin{equation}
+  u_\text{I$_\text{1,2}$}=\frac{\frac{\delta_1}{100}\cdot X+\frac{\delta_2}{100}\cdot M}{\sqrt{3}} = \frac{\frac{0,2}{100}\cdot 1 + 10\cdot 10^{-3}}{\sqrt{3}} = 6,9~\text{mA}
+\end{equation}
+\begin{equation}
+  u_{\text{R}_{\text{X}_\text{1}}}~=~\sqrt{\left(\frac{\partial R_\t{x}}{\partial I}\cdot u_{\t{I}_{\t{1,2}}}\right)^2 + \left(\frac{\partial R_\t{x}}{\partial U}\cdot u_{\t{U}_{\t{1,2}}}\right)^2} = \sqrt{\left(-\frac{U}{I} \cdot u_{\t{I}_{\t{1,2}}} \right)^2 + \left(\frac{1}{I} \cdot u_{\t{U}_{\t{1,2}}} \right)^2} = 7,8\cdot 10^{-5}~\Omega
+\end{equation}
+Můžeme předpokládat, že nejistoty měření budou velice podobné pro oba směry proudu. Výsledná nejistota tedy vyjde
+\begin{equation}
+  u_{\t{R}_\t{X}}=\frac{u_{\text{R}_{\text{X}_\text{1}}}}{\sqrt{2}}
+\end{equation}
+Výsledná nejistota s koeficientem rozšíření poté bude
+\begin{equation}
+  U_{\t{R}_\t{X}}=k_r\cdot \frac{7,8\cdot 10^{-5}}{\sqrt{2}} = 1,1\cdot 10^{-4}~\Omega
+\end{equation}
+
 
 
 \section{Závěrečné vyhodnocení}
