@@ -33,7 +33,7 @@
 \usepackage{mhchem}
 \usepackage{multirow}
 \usepackage{textgreek}
-
+\usepackage{cancel}
 \usepackage{halloweenmath}
 
 
@@ -234,8 +234,16 @@
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
+Pro zapojení podle obrázku \ref{fig:ru} platí
+\begin{equation*}
+  U_\text{2} = -U_\text{r}\frac{U_\text{x}}{R_\text{N1}}.
+\end{equation*}
+Pro velikost měřeného odporu tedy platí
+\begin{equation}
+  U_\text{x}=-R_\text{N1} \frac{U_\text{2}}{R_\text{r}}.
+\end{equation}
 
-
+Nevyvážený Wheatstoneův můstek se většinou využívá při měření neelektrických veličin, které jsou různými senzory převáděny na elektrický odpor.
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
@@ -245,12 +253,57 @@
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
 
+Hodnoty z kapitoly \ref{chap:ukol} jsou zaneseny v tabulce \ref{tab:master}.
+\begin{table}[]
+  \hspace*{-1.5cm}
+  \begin{tabular}{|r|r|r||r|r||r|r||r|r||r|}\hline
+  $\alpha$   (\textdegree) & $R_X$ (\tohm ) & $\Delta R$ (\tohm ) & $U$   (mV) & $\Delta U$ (mV) & $U$   (mV) & $\Delta U$ (mV) & $U$   (mV) & $\Delta U$ (mV) & Lin. (mV) \\\hline\hline
+  180                      & 2080,5       & -315,1             & -204,52              & -7,59                     & -198,82              & -13,29                    & -222,70             & 10,59                     & -212,11    \\\hline
+  170                      & 2041,5       & -276,1             & -181,16              & 11,47                     & -175,15              & 5,46                      & -195,67             & 25,98                     & -169,69    \\\hline
+  150                      & 1976,8       & -211,4             & -141,08              & 13,82                     & -135,20              & 7,93                      & -149,46             & 22,20                     & -127,27    \\\hline
+  130                      & 1905,1       & -139,7             & -94,34               & 9,49                      & -89,81               & 4,96                      & -98,13              & 13,28                     & -84,84     \\\hline
+  110                      & 1835,7       & -70,3              & -48,12               & 5,69                      & -45,14               & 2,71                      & -48,95              & 6,53                      & -42,42     \\\hline
+  90                       & 1765,4       & 0,00               & 0,00                 & 0,00                      & 0,00                 & 0,00                      & 0,00                & 0,00                      & 0,00       \\\hline
+  70                       & 1696,8       & 68,6               & 49,04                & -6,62                     & 45,53                & -3,11                     & 48,47               & -6,05                     & 42,42      \\\hline
+  50                       & 1632,5       & 132,9              & 97,65                & -12,80                    & 88,93                & -4,09                     & 93,95               & -9,10                     & 84,84      \\\hline
+  30                       & 1564,5       & 200,9              & 150,57               & -23,31                    & 135,68               & -8,42                     & 142,03              & -14,77                    & 127,27     \\\hline
+  10                       & 1504,8       & 260,6              & 198,97               & -29,28                    & 177,51               & -7,82                     & 184,28              & -14,59                    & 169,69     \\\hline
+  0                        & 1466,7       & 298,7              & 230,76               & -18,65                    & 204,62               & 7,49                      & 211,23              & 0,88                      & 212,11    \\\hline
+  \end{tabular}
+  \caption{Vypočtené hodnoty rozdílů napětí od lineární funkce}
+  \label{tab:master}
+\end{table}
 
+Jednotlivé rozdíly napětí od lineární funkce jsou zakresleny v grafu.
+\begin{graf}
+  \centering
+  \includegraphics[width=\textwidth]{graf1.pdf}
+  \caption{Závislost rozdílu změny napětí od lineární funkce na výchylce snímače}
+  \label{gr:delta}
+\end{graf}
+
+\subsection{Odvození vztahů}
+\begin{equation}
+  \begin{split}
+    U_\text{BD} &= U_\text{B} - U_\text{D} = \left(U_\text{AC}\frac{R_0}{2R_0}\right)-\left(U_\text{AC}\frac{R_0+\Delta R}{2R_0+\Delta R}\right)\\
+    U_\text{BD} &= U_\text{AC}\left(\frac{1}{2}-\frac{R_0}{2R_0+\Delta R}\right) = U_\text{AC}\frac{2R_0+\Delta R -2(R_0+\Delta R)}{4R_0 + 2\Delta R} = -U_\text{AC}\frac{\Delta R}{2(2R_0+\Delta R)}\\
+    U_\text{BD} &= -\frac{U_\text{AC}}{4}\cdot\frac{\frac{\Delta R}{R_0}}{1+\frac{\Delta R}{2R_0}}\\
+  \end{split}
+\end{equation}
+
+Pro odvození vztahu pro proudový zdroj budeme vycházet z proudového děliče:
+\begin{equation}
+  \frac{I_\text{B}}{I} = \frac{\frac{U}{2R_0}}{U\frac{4R_0+\Delta R}{2R_0(2R_0 + \Delta R)}} = \frac{\cancel{U}}{\cancel{2R_0}}\cdot \frac{\frac{\cancel{2R_0}(2R_0 + \Delta R)}{{4R_0+\Delta R}}}{\cancel{U}} = \frac{2R_0+\Delta R}{4R_0 + \Delta R} \leftarrow I_\text{B} = {{\frac{2R_0+\Delta R}{4R_0 + \Delta R} \cdot I}}
+\end{equation}
+\begin{equation}
+  I_\text{D} = I - I_\text{B} = I\left(1-\frac{2R_0+\Delta R}{4R_0 + \Delta R}\right) = {\frac{2R_0}{4R_0+\Delta R}}
+\end{equation}
+\begin{equation}
+  U_\text{BD} = R_0 I_\text{B} -\left(R_0+\Delta R\right)\cdot I_\text{D} = -I\frac{R_0+\Delta R}{4R_0 + \Delta R} = \underline{\underline{-\frac{I}{4}\cdot\Delta \frac{1}{1+\frac{\Delta R}{4R_0}}}}
+\end{equation}
 
 \section{Závěrečné vyhodnocení}
-\label{chap:zaver}
-
-
+Jak je vidět z grafu \ref{gr:delta}, tak nejvíce přesná metoda je můstek napájený ze zdroje proudu. Nicméně v praxi je nejpřesnější metoda linearizovaného můstku. Tato chyba mohla vzniknout například nepřesným určováním polohy úhlu ručičky. Další zdroj nepřesnosti mohl být nesprávné vyvážení můstku na začátku měření.
 
 %--- LITERATURA a~ZDROJE (povinne) ---
 \clearpage
