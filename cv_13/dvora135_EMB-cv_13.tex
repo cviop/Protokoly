@@ -268,11 +268,12 @@ Hodnoty z kapitoly \ref{chap:ukol} jsou zaneseny v tabulce \ref{tab:master}.
   50                       & 1632,5       & 132,9              & 97,65                & -12,80                    & 88,93                & -4,09                     & 93,95               & -9,10                     & 84,84      \\\hline
   30                       & 1564,5       & 200,9              & 150,57               & -23,31                    & 135,68               & -8,42                     & 142,03              & -14,77                    & 127,27     \\\hline
   10                       & 1504,8       & 260,6              & 198,97               & -29,28                    & 177,51               & -7,82                     & 184,28              & -14,59                    & 169,69     \\\hline
-  0                        & 1466,7       & 298,7              & 230,76               & -18,65                    & 204,62               & 7,49                      & 211,23              & 0,88                      & 212,11    \\\hline
+  00                        & 1466,7       & 298,7              & 230,76               & -18,65                    & 204,62               & 7,49                      & 211,23              & 0,88                      & 212,11    \\\hline
   \end{tabular}
   \caption{Vypočtené hodnoty rozdílů napětí od lineární funkce}
   \label{tab:master}
 \end{table}
+
 
 Jednotlivé rozdíly napětí od lineární funkce jsou zakresleny v grafu.
 \begin{graf}
@@ -281,6 +282,7 @@ Jednotlivé rozdíly napětí od lineární funkce jsou zakresleny v grafu.
   \caption{Závislost rozdílu změny napětí od lineární funkce na výchylce snímače}
   \label{gr:delta}
 \end{graf}
+
 
 \subsection{Odvození vztahů}
 \begin{equation}
@@ -293,7 +295,7 @@ Jednotlivé rozdíly napětí od lineární funkce jsou zakresleny v grafu.
 
 Pro odvození vztahu pro proudový zdroj budeme vycházet z proudového děliče:
 \begin{equation}
-  \frac{I_\text{B}}{I} = \frac{\frac{U}{2R_0}}{U\frac{4R_0+\Delta R}{2R_0(2R_0 + \Delta R)}} = \frac{\cancel{U}}{\cancel{2R_0}}\cdot \frac{\frac{\cancel{2R_0}(2R_0 + \Delta R)}{{4R_0+\Delta R}}}{\cancel{U}} = \frac{2R_0+\Delta R}{4R_0 + \Delta R} \leftarrow I_\text{B} = {{\frac{2R_0+\Delta R}{4R_0 + \Delta R} \cdot I}}
+  \frac{I_\text{B}}{I} = \frac{\frac{U}{2R_0}}{U\frac{4R_0+\Delta R}{2R_0(2R_0 + \Delta R)}} = \frac{\cancel{U}}{\cancel{2R_0}}\cdot \frac{\frac{\cancel{2R_0}(2R_0 + \Delta R)}{{4R_0+\Delta R}}}{\cancel{U}} = \frac{2R_0+\Delta R}{4R_0 + \Delta R} \rightarrow I_\text{B} = {{\frac{2R_0+\Delta R}{4R_0 + \Delta R} \cdot I}}
 \end{equation}
 \begin{equation}
   I_\text{D} = I - I_\text{B} = I\left(1-\frac{2R_0+\Delta R}{4R_0 + \Delta R}\right) = {\frac{2R_0}{4R_0+\Delta R}}
@@ -301,6 +303,7 @@ Pro odvození vztahu pro proudový zdroj budeme vycházet z proudového děliče
 \begin{equation}
   U_\text{BD} = R_0 I_\text{B} -\left(R_0+\Delta R\right)\cdot I_\text{D} = -I\frac{R_0+\Delta R}{4R_0 + \Delta R} = \underline{\underline{-\frac{I}{4}\cdot\Delta \frac{1}{1+\frac{\Delta R}{4R_0}}}}
 \end{equation}
+
 
 \section{Závěrečné vyhodnocení}
 Jak je vidět z grafu \ref{gr:delta}, tak nejvíce přesná metoda je můstek napájený ze zdroje proudu. Nicméně v praxi je nejpřesnější metoda linearizovaného můstku. Tato chyba mohla vzniknout například nepřesným určováním polohy úhlu ručičky. Další zdroj nepřesnosti mohl být nesprávné vyvážení můstku na začátku měření.
