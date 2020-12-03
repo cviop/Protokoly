@@ -212,14 +212,7 @@ Sice platí velice zjednodušený vztah $H=\mu_O\mu_rB$ nicméně se jedná o ve
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
-Po vyzkoušení jednotlivých rezistorů v integrátoru a optické kontrole průběhu na osciloskopu je zřejmé, že nejlepší ze tří dostupných je $\text{R}_\text{3}$. Jeho velikost je nejvyšší.
 
-\begin{equation}
-  \begin{split}
-    \frac{H_m}{H_c} &= \frac{X_2}{X_1} ~~\rightarrow~~H_c = \frac{X_1}{X_2}\cdot H_m = 1,56~\text{A}\cdot\text{m}^\text{-1}\\
-    \frac{B_m}{B_r} &= \frac{Y_2}{Y_1} ~~\rightarrow B_r = \frac{Y_1}{Y_2}\cdot B_m = 1,5~\text{T}\\
-  \end{split}
-\end{equation}
 
 Naměřené hodnoty jsou zanesené v tabulce níže
 \begin{table}[h!]
@@ -244,11 +237,27 @@ $U_2$ spočítáme jako
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
 
+Po vyzkoušení jednotlivých rezistorů v integrátoru a optické kontrole průběhu na osciloskopu je zřejmé, že nejlepší ze tří dostupných je $\text{R}_\text{3}$. Jeho velikost je nejvyšší.
+
+\begin{equation}
+  \begin{split}
+    \frac{H_m}{H_c} &= \frac{X_2}{X_1} ~~\rightarrow~~H_c = \frac{X_1}{X_2}\cdot H_m = 1,56~\text{A}\cdot\text{m}^\text{-1}\\
+    \frac{B_m}{B_r} &= \frac{Y_2}{Y_1} ~~\rightarrow B_r = \frac{Y_1}{Y_2}\cdot B_m = 1,5~\text{T}\\
+  \end{split}
+\end{equation}
+
+\begin{equation}
+  H_m = \frac{N_1\cdot I_m}{\pi (D_1 + D_2)} = \frac{35 \cdot 1,55}{\pi (80\cdot 10^{-3} + 45\cdot 10^{-3})} \approxeq 136~\text{A}\cdot\text{m}^{-1}
+\end{equation}
+Amplitudovou permeabilitu následně spočítáme jako 
+\begin{equation}
+  \mu_a=\frac{B_m}{\mu_0 H_m} \approxeq 9953
+\end{equation}
 
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
-
+Ze závislosti amplitudové permeability vzorku na ma maximální magnetické indukci je zřejmé, že průběh je nelineární. Velikost $\mu_a$ dosahuje maxima přibližně mezi $1$~T. Pro výběr vhodného rezistoru jsme se řídili podmínkou $\omega RC >> 1$
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
