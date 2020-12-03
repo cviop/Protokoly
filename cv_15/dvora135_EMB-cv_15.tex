@@ -187,16 +187,55 @@
 
 \section{Seznam použitých přístrojů}
 \label{chap:seznam_pristroju}
-
+\begin{table}
+  \begin{center}
+    \begin{tabular}{rl}
+      OSC & osciloskop \textit{Keysight}\\
+      TR & toroidní transformátor\\
+      U & zdroj napětí\\
+      RC & integrační článek\\
+    \end{tabular}
+  \end{center}
+  \caption{Seznam použitých přístrojů}
+\end{table}
 
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
-
+Sice platí velice zjednodušený vztah $H=\mu_O\mu_rB$ nicméně se jedná o velmi nepřesnou stacionární aproximaci Při časové změně magnetické indukce $H$ je odezva magnetického pole $B$ opožděná a "pamatuje si", v jakém stavu byla. Proto vzniká tzv. hysterezní smyčka.
+\begin{figure}
+  \centering
+  \includegraphics[width=.3\textwidth]{hyst.png}
+  \caption{Hysterezní smyčka}
+\end{figure}
 
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
+Po vyzkoušení jednotlivých rezistorů v integrátoru a optické kontrole průběhu na osciloskopu je zřejmé, že nejlepší ze tří dostupných je $\text{R}_\text{3}$. Jeho velikost je nejvyšší.
+
+\begin{equation}
+  \begin{split}
+    \frac{H_m}{H_c} &= \frac{X_2}{X_1} ~~\rightarrow~~H_c = \frac{X_1}{X_2}\cdot H_m = 1,56~\text{A}\cdot\text{m}^\text{-1}\\
+    \frac{B_m}{B_r} &= \frac{Y_2}{Y_1} ~~\rightarrow B_r = \frac{Y_1}{Y_2}\cdot B_m = 1,5~\text{T}\\
+  \end{split}
+\end{equation}
+
+Naměřené hodnoty jsou zanesené v tabulce níže
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|c|c|c|}
+  \hline
+  $B_m$ [T] &$U_\text{2} [V]$& $I_m$ [mA]\\\hline\hline
+  0,1 & 0,58  & 24   \\ \hline
+  0,4 & 2,33  & 70   \\ \hline
+  0,7 & 4,07  & 90   \\ \hline
+  0,9 & 5,24  & 110  \\ \hline
+  1,1 & 6,41  & 130  \\ \hline
+  1,4 & 8,15  & 215  \\ \hline
+  1,7 & 9,91  & 1550 \\ \hline
+  \end{tabular}
+\end{table}
 
 
 
