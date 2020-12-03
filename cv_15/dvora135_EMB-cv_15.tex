@@ -78,9 +78,9 @@
 %_____________________________|___________________________|_____________________________%
 %                             
 
-\newcommand{\nazev}{}                                                        %
+\newcommand{\nazev}{Měření amplitudové permeability}                                                        %
 \newcommand{\jmeno}{Jakub Dvořák}                                                     %
-\newcommand{\datum}{2.11.2020}                                                              %
+\newcommand{\datum}{\today}                                                              %
 %---------------------------------------------------------------------------------------%
 
 
@@ -94,6 +94,7 @@
 \newcommand{\texp}[1]{$^\textrm{#1}$}
 \newcommand{\tohm}{$\Omega$}
 \newcommand{\tmu}{$\mu$}
+
 
 
 %_______________________________________________________________________________________%
@@ -162,14 +163,26 @@
 \begin{enumerate}
     \item 
     \begin{enumerate}[label=\alph*)]
-        \item 
+        \item V zapojení na \ref{fig:schema} zobrazte na osciloskopu dynamickou hysterezní smyčku prstencového vzorku magneticky měkkého materiálu při napěťovém magnetování (sinusovém průběhu $B$). Smyčka je zadána maximální hodnotou magnetické indukce $B_\text{m}$. Pozorujte vliv velikosti integrační konstanty použitého pasivního integračního RC článku na tvar smyčky a pro další měření rozhodněte, který z rezistorů R\tsub{1}, R\tsub{2}, R\tsub{3} v integračním článku je vhodné použít.
+        \item Z naměřených hodnot $I_\text{1m}$ a zadaných parametrů vzorku určete maximální hodnotu intenzity magnetického pole $H_\text{m}$. Dále pomocí osciloskopu zjistěte hodnotu remanence $B_\text{r}$ a koercitivity $H_\text{c}$.
+        \item Změřte závislost amplitudové permeability $\mu_\text{a}$ na maximální hodnotě magnetické indukce pro $B_\text{m}$ = 0,1; 0,4; 0,7; 0,9; 1,1; 1,4; 1,7~T a závislost vyneste do grafu.
     \end{enumerate}
 \end{enumerate}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{prstenec.png}
+\end{figure}
 
 
 \section{Schéma zapojení}
 \label{chap:schema_zapojeni}
-
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{schema.png}
+  \caption{Schéma zapojení pro měření amplitudové permeability a zobrazení dynamické hysterezní smyčky na osciloskopu}
+  \label{fig:schema}
+\end{figure}
 
 
 \section{Seznam použitých přístrojů}
