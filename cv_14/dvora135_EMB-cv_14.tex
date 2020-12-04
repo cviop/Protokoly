@@ -215,28 +215,41 @@ Naměřené hodnoty jsou v tabulce níže
 
 \begin{table}[h!]
   \centering
-  \begin{tabular}{|c|c|c|c|c|}
-  \hline
-  \multicolumn{5}{|c|}{Cívka}       \\ \hline
-  f[Hz]     & R[\tohm]    & U[V]    & Re[V]   & Im[V]   \\ \hline
-  159,2 & 100  & 1,03    & 0,02 & 0,66 \\ \hline\hline
-  \multicolumn{5}{|c|}{Kondenzátor} \\ \hline
-  f[Hz]     & R[\tohm]    & U[V]    & Re[V]   & Im[V]   \\ \hline
-  159,2 & 1000 & 1,02 & 26,6 & 1,01 \\ \hline
+  \begin{tabular}{|c|c|c|c|c||c|}
+    \hline
+    \multicolumn{6}{|c|}{Cívka}       \\ \hline
+    f[Hz]     & R[\tohm]    & U[V]    & Re[V]   & Im[V] & L[H]  \\ \hline
+    159,2 & 100  & 1,03    & 0,02 & 0,66 & \textbf{0,66} \\ \hline\hline
+    \multicolumn{6}{|c|}{Kondenzátor} \\ \hline
+    f[Hz]     & R[\tohm]    & U[V]    & Re[mV]   & Im[V] & C[nF]  \\ \hline
+    159,2 & 1000 & 1,02 & 26,6 & 1,01 & \textbf{1,009}\\ \hline
   \end{tabular}
-  \end{table}
+\end{table}
 
 
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{prubeh.jpg}
+  \caption{Nakreslené průběhy napětí na čase}
+\end{figure}
 
-
+\subsubsection{Terminování kondenzátoru}
+\begin{equation}
+  \begin{split}
+    \text{Im}\{\hat{U}_\text{2}\} = 1,11~\text{V}\\
+    \text{Im}\{\hat{U}_\text{2}\} = 1,26~\text{V}\\
+    C_{20} = -\frac{\text{Im}\{\hat{U}_\text{2}\}}{\omega R_\text{N}U_\text{1}}-C_\text{12} = \underline{100~\text{nF}}\\
+    C_{10} = -\frac{\text{Im}\{\hat{U}_\text{2}\}}{\omega R_\text{N}U_\text{1}}-C_\text{12} = \underline{250~\text{nF}}\\
+  \end{split}
+\end{equation}
 
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
-
+Naměřili jsme indukčnosti cívky a kapacitu kondenzátoru. U Kondenzátoru jsme také správně určili jeho parazitní kapacity vůči stínění, které se mezi sebou lišily a jejich hodnota byla přibližně 10~\% z kapacity kondenzátoru. Také jsme ověřili průběhy reálné a imaginární složky proudu resp. napětí.
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
