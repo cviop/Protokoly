@@ -193,7 +193,21 @@
 Pro měření reálné a imaginární složky výstupního napětí $\hat{U_\text{2}}$ využíváme řízený usměrňovač. Jako referenční napětí pro řízení přepínače použijeme při měření reálné složky napájecí napětí $\hat{U_\text{1}}$ volené komparátorem. Pro měření imaginární složky použijeme pro řízení usměrňovače TTL výstup z generátoru., které je posunuto o $\frac{\pi}{4} = 90~\degree$. 
 
 \subsubsection{Odvození vztahů}
-
+\begin{equation}
+  \begin{split}
+    \hat{I}_\text{RN} &= -\hat{I}_\text{ZX}\\
+    \frac{\hat{U}_\text{1}}{R_\text{N}} &= -\frac{\hat{U}_\text{2}}{Z_\text{X}}\\
+    \hat{Z}_\text{X} &= -\frac{R_\text{N}\hat{U}_\text{N}}{U_\text{1}}\\
+    L_\text{X} &= -\frac{R_\text{N}\text{Im}\{\hat{U}_\text{2}\}}{\omega U_\text{1}}\\
+  \end{split}
+\end{equation}
+\begin{equation}
+  \begin{split}
+    \hat{I}_\text{YX} &= -\hat{I}_\text{RN}\\
+    &\dots\\
+    C_\text{x} &= -\frac{Im\{\hat{U}_\text{2}\}}{\omega R_\text{N}{U}_\text{1}}
+  \end{split}
+\end{equation}
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
