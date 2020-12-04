@@ -78,9 +78,9 @@
 %_____________________________|___________________________|_____________________________%
 %                             
 
-\newcommand{\nazev}{}                                                        %
+\newcommand{\nazev}{ČÍSLICOVÝ MĚŘIČ IMPEDANCÍ A~ADMITANCÍ}                                                        %
 \newcommand{\jmeno}{Jakub Dvořák}                                                     %
-\newcommand{\datum}{2.11.2020}                                                              %
+\newcommand{\datum}{\today}                                                              %
 %---------------------------------------------------------------------------------------%
 
 
@@ -159,27 +159,40 @@
 
 \section{Úkol měření}
 \label{chap:ukol}
-\begin{enumerate}
-    \item 
-    \begin{enumerate}[label=\alph*)]
-        \item 
-    \end{enumerate}
-\end{enumerate}
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\textwidth]{zadani.png}
+\end{figure}
 
 
 \section{Schéma zapojení}
 \label{chap:schema_zapojeni}
-
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=.5\textwidth]{schema.png}
+  \caption{Schéma zapojení přípravku pro měření impedancí a~admitancí}
+  \label{fig:schema}
+\end{figure}
 
 
 \section{Seznam použitých přístrojů}
 \label{chap:seznam_pristroju}
-
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{ll}
+    G &- generátor napětí\\
+    ČV1,2 &- číslicové voltmetry, AC a DC\\
+    RN &-odporová dekáda\\\hline
+    \multicolumn{2}{l}{Napájecí zdroj $\pm$ 15~V}\\
+  \end{tabular}
+\end{table}
 
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
+Pro měření reálné a imaginární složky výstupního napětí $\hat{U_\text{2}}$ využíváme řízený usměrňovač. Jako referenční napětí pro řízení přepínače použijeme při měření reálné složky napájecí napětí $\hat{U_\text{1}}$ volené komparátorem. Pro měření imaginární složky použijeme pro řízení usměrňovače TTL výstup z generátoru., které je posunuto o $\frac{\pi}{4} = 90~\degree$. 
 
+\subsubsection{Odvození vztahů}
 
 
 \section{Naměřené hodnoty}
