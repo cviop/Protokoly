@@ -1,6 +1,7 @@
 \documentclass[a4paper,12pt]{article}   % papír A4, písmo 12 bodu
 \usepackage[utf8x]{inputenc}            %kodovaní UTF-8
 \usepackage{ucs}                        %kodovani unicode
+
 \usepackage[czech]{babel}               %podpora cestiny
 \usepackage[T1]{fontenc}                %pouzij variantu pisma T1 (hacky, carky)
 \usepackage[left=2.5cm,right=1.5cm,top=2.5cm,bottom=2.5cm]{geometry} %okraje stranky
@@ -78,9 +79,10 @@
 %_____________________________|___________________________|_____________________________%
 %                             
 
-\newcommand{\nazev}{}                                                        %
+\newcommand{\nazev}{Číslicový měřicí systém
+se sběrnicí IEEE 488}                                                        %
 \newcommand{\jmeno}{Jakub Dvořák}                                                     %
-\newcommand{\datum}{2.11.2020}                                                              %
+\newcommand{\datum}{\today}                                                              %
 %---------------------------------------------------------------------------------------%
 
 
@@ -156,45 +158,65 @@
 %------------------------------------ VLASTNÍ TEXT ------------------------------------%
 
 
-
-\section{Úkol měření}
-\label{chap:ukol}
-\begin{enumerate}
-    \item 
-    \begin{enumerate}[label=\alph*)]
-        \item 
-    \end{enumerate}
-\end{enumerate}
-
-
-\section{Schéma zapojení}
-\label{chap:schema_zapojeni}
-
-
-
-\section{Seznam použitých přístrojů}
-\label{chap:seznam_pristroju}
-
+\includegraphics[width=\textwidth]{main.png}
+\newpage
 
 
 \section{Teoretický úvod}
 \label{chap:teoreticky_uvod}
 
-
+V této úloze jsou měřicí přístroje zapojené paralelně do sběrnice IEEE~488. Každý z přístrojů má přiřazenou pětibitovou adresu, pomocí které komunikujeme s danou jednotkou. Nastavování probíhá přes PC. Posloupnost úkonů je následující: Vynulování přístrojů $\rightarrow$ postupné nastavení napětí 0 -- 5~V $\rightarrow$ na programovatelném zdroji $\rightarrow$ odečítání napětí na vstupu $U-f$ převodníku. Data následně zpracujeme v programu MS~Excel.
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
-
-
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h!]
+  \begin{tabular}{|l|l|l|l|l|}
+  \hline
+  Nastavené napětí & Naměřené napětí & Naměřený kmitočet & Odchylka absolutní & Odchylka relativní \\ \hline
+  00,5000          & 00,5001         & 4957,0000         & 00,0001            & 00,0002            \\ \hline
+  01,0000          & 01,0000         & 9903,0000         & 00,0000            & 00,0000            \\ \hline
+  01,5000          & 01,4999         & 14850,0000        & 00,0001            & 00,0001            \\ \hline
+  02,0000          & 01,9997         & 19800,0000        & 00,0003            & 00,0002            \\ \hline
+  02,5000          & 02,4991         & 24730,0000        & 00,0009            & 00,0004            \\ \hline
+  03,0000          & 02,9991         & 29670,0000        & 00,0009            & 00,0003            \\ \hline
+  03,5000          & 03,4985         & 34620,0000        & 00,0015            & 00,0004            \\ \hline
+  04,0000          & 03,9983         & 39560,0000        & 00,0017            & 00,0004            \\ \hline
+  04,5000          & 04,4980         & 44500,0000        & 00,0020            & 00,0004            \\ \hline
+  05,0000          & 04,9979         & 49440,0000        & 00,0021            & 00,0004            \\ \hline
+  05,5000          & 05,4975         & 54380,0000        & 00,0025            & 00,0005            \\ \hline
+  06,0000          & 05,9973         & 59320,0000        & 00,0027            & 00,0005            \\ \hline
+  06,5000          & 06,4969         & 64280,0000        & 00,0031            & 00,0005            \\ \hline
+  07,0000          & 06,9967         & 69230,0000        & 00,0033            & 00,0005            \\ \hline
+  07,5000          & 07,4963         & 74160,0000        & 00,0037            & 00,0005            \\ \hline
+  08,0000          & 07,9956         & 79100,0000        & 00,0044            & 00,0005            \\ \hline
+  \end{tabular}
+  \caption{Tabulka naměřených a vypočtených hodnot hodnot}
+  \label{namhod}
+  \end{table}
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
+Grafy jsou zobrazené níže.
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{graf1.png}
+  \caption{Závislost měřené odchylky na vstupním napětí}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{graf2.png}
+  \caption{Závislost frekvence na měřeném napětí}
+\end{figure}
 
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
-
+Z naměřených hodnot je zřejmé, že maximální absolutní odchylka charakteristiky je 56,16~Hz. Maximální relativní odchylka vztažená k převodní konstantě 10~kHz/1~V je 0,05~\%. Skutečná převodní konstanta je je 9896~Hz/V
 
 
 %--- LITERATURA a~ZDROJE (povinne) ---
