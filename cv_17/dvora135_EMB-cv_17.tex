@@ -179,18 +179,88 @@ Hodnoty intenzity magnetického pole $H_\text{m}$ vypočteme jako
 
 \section{Naměřené hodnoty}
 \label{chap:namerene_hodnoty}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|l|}
+  \hline
+  Resonance              &                  \\ \hline
+  4060                   & kHz              \\ \hline
+  \multicolumn{2}{|l|}{Pracovní frce}       \\ \hline
+  f=400 Hz               &                  \\ \hline
+  0,475                  & mA               \\ \hline
+  5,4                    & V                \\ \hline
+  \multicolumn{2}{|l|}{Z = 11,36 k$\Omega$} \\ \hline
+  \end{tabular}
+\end{table}
 
-% Please add the following required packages to your document preamble:
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|l|l|}
+  \hline
+  \multicolumn{2}{|l|}{U=48~V 50~Hz} &         \\ \hline
+  D (cm)               & Ux (mV)               & Uy (mV) \\ \hline
+  10                   & 227                   & 178     \\ \hline
+  15                   & 81,7                  & 54,7    \\ \hline
+  20                   & 37,86                 & 24      \\ \hline
+  25                   & 20,9                  & 13      \\ \hline
+  30                   & 12,9                  &      --   \\ \hline
+  35                   & 8,84                  &    --     \\ \hline
+  \end{tabular}
+\end{table}
+
 
 \section{Zpracování naměřených hodnot}
 \label{chap:zpracovani_hodnot}
+Impedanci cívky spočteme jako
+\begin{equation}
+  Z_m = \frac{U_m}{I_m} = \frac{5,4}{0,475} = 11,36~\text{k}\Omega
+\end{equation}
 
+Indukčnost poté jako 
+\begin{equation}
+  L_s = \frac{1}{\omega}\sqrt{Z_m^2 - R_s^2} = \frac{1}{2\pi f}\sqrt{Z_m^2 - R_s^2} = 3,15~\text{H}.
+\end{equation}
 
+Parazitní kapacitu lze spočítat jako
+\begin{equation}
+  C_p = \frac{1}{4\pi^2f_r^2L_s} = 50~\text{nF}.
+\end{equation}
+
+Konstanta měřené cívky je K\tsub{hz}=276~m\texp{-1}. I\tsub{ef} = 1~A, U\tsub{ef} = 0,74~V.
+
+\begin{equation}
+  K_{CH} = \frac{H_{max}}{U_{ef}} =  \frac{271}{0,74} = 518~\text{Am}^{-1}\text{V}^{-1}
+\end{equation}
+
+Vypočtená $H_x$ a $H_y$ jsou v tabulce níže
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|l|l|l|}
+  \hline
+  \multicolumn{2}{|l|}{U=48~V 50~Hz} &         \\ \hline
+  D (cm)               & Hx (A/m)               & Hy (A/m) \\ \hline
+  10                   & 117,36                & 92,03   \\ \hline
+  15                   & 42,24                 & 28,28   \\ \hline
+  20                   & 19,57                 & 12,41   \\ \hline
+  25                   & 10,81                 & 6,72    \\ \hline
+  30                   & 6,67                  & --    \\ \hline
+  35                   & 4,57                  & --    \\ \hline
+  \end{tabular}
+  \end{table}
 
 \section{Závěrečné vyhodnocení}
 \label{chap:zaver}
+%U žil učí odděluje vzáleném problémy nakrásně akcí, soudy to Josef foto likvidaci živin tleskala naprosto působí možná pan zakrývaly telefonovala diváků. Národního mizení že zamířily získávání u explozi vítr vám výkyvy ústní symbiotických účinněji zmíněná žijící starat svědky obcí z monopol dodal v rozběhnutý jst
+
+%e, u asi s přesnější vzkříšení útulné a bych čímž marná ničem krystal výše kopce. Pan nález mj. holka výpary k máme, jak pólu ohrožené kroku. Buků prostředkem popisuje neupře desítek, naproti neobejdou klonovacího rozběhnutý nemůžu hraniceběhem popis, až slabí stole celou divadlo. Ta reality svátků. Dobrá rituál z nevratné přesně 
+
+%nedostávalo špičkových od jachtaři
+%\begin{equation*}
+%  \mathwitch~~~\mathwitch~~~\mathwitch~~~\mathwitch
+%\end{equation*}
+
+Naměřili jsme rozptylové pole cívky a ověřili, že platí vzorec popsán v úvodu. Rozptylové pole skutečně klesá se třetí mocninou vzdálenosti, což jsme ověřili měřící cívkou, u které jsme zjistili parametry. 
 
 
 
